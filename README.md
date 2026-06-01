@@ -1,0 +1,200 @@
+# Obchodníci
+
+- [Obchodníci](#obchodníci)
+  - [Mapa](#mapa)
+  - [Cíl hry](#cíl-hry)
+  - [Dopravní prostředky](#dopravní-prostředky)
+    - [Pilotní licence](#pilotní-licence)
+    - [Pohyb](#pohyb)
+    - [Vylepšení (Muduly)](#vylepšení-muduly)
+    - [Posádka](#posádka)
+  - [Suroviny](#suroviny)
+  - [Boj](#boj)
+  - [Události a Trh (Events)](#události-a-trh-events)
+    - [Vylepšení měst](#vylepšení-měst)
+  - [Příprava hry](#příprava-hry)
+  - [Začátek hry](#začátek-hry)
+  - [Tah Hráče](#tah-hráče)
+  - [Města](#města)
+    - [Upgrade](#upgrade)
+  - [DLC](#dlc)
+
+
+Steampunkově/fantasy laděný "Pick-up and Deliver" spojený s "Tableau Building" (stavbou vlastního stroje z karet).
+
+## Mapa
+
+## Cíl hry
+
+## Dopravní prostředky
+
+
+Lodě
+Vzducholodě
+Streandbeast - Chodci
+
+Z karet skládáš své stroje na přepravu. Díky tomu mají kamacitu rychlost a jiné bonusy.
+
+Lodě mohou putovat jen po vodě.
+Kročci jen po pevnině a s krze brody úžiny.
+- musejí se vyhnout horám a jezerům
+Vzducholodě mohou cestovat kdekoliv.
+
+
+Každý dopravní prostředek začíná s přídí, zádí a jednou kajutou pro kapitána. 
+
+### Pilotní licence
+Reprezentují stroj.
+
+Dvouvrstvý karton s výřezy pro dřevěné kostičky nebo kolíčky. Vzhledem k tomu, že se rychlost a životy budou neustále dynamicky měnit (přidáním modulu, naložením těžké suroviny nebo inkasováním zásahu), hráči potřebují "dashboard", kde tyhle proměnné okamžitě vidí.
+
+Na této desce (licenci) můžeš trackovat:
+
+Aktuální rychlost: Posouváš kolíček, když přidáš motor nebo zátěž.
+
+Životy / Integritu: Ukazuje, kolik zásahů stroj vydrží.
+
+### Pohyb
+
+Každý modul (nákladový prostor, dělo, extra pancíř) bude mít kromě své funkce i atribut zátěž. Motory budou mít naopak atribut výkon.
+
+Rychlost stroje: 
+$$
+\text{Rychlost} = \text{Celkový výkon} - \text{Celková zátěž}
+$$
+
+Hráč, který si postaví obří nákladní vlak plný děl, bude potřebovat masivní parní kotle, aby se vůbec pohnul o jeden hex. Naproti tomu kurýr na lehké vzducholodi s jedním motorem a malým skladem proletí mapu za dvě kola.
+
+### Vylepšení (Muduly)
+
+Parní kotel V2 dává rychlost 4 hexy
+
+Kráčecí stroj:
+Hřbetní plachty
+Boční plachty
+Nohy
+
+Mají:
+- cenu,
+- hmotnost,
+- bonusy
+
+Éra I (Dřevo a Plachty):
+Lehké a levné moduly. Dřevěný trup tě nezatíží, plachty nepotřebují uhlí k provozu, ale celková kapacita a odolnost proti pirátům je mizerná.
+
+Éra II (Pára a Železo):
+Nastupuje průmyslová revoluce. Železné nýtované pláty a parní kotle. Tyhle moduly mají obrovský výkon a kapacitu, ale jejich zátěž je tak velká, že k nim musíš připojit odpovídající pohon, jinak se vůbec nepohneš. Navíc parní motory mohou vyžadovat, abys v nákladovém prostoru trvale vozil 1 kostičku uhlí jen jako palivo.
+
+Éra III (Ocel):
+Masivní ocelové dreadnoughty a aetherové turbíny. Extrémně drahé moduly s obrovským výkonem, které ti umožní přejet mapu za jeden tah a odvézt půlku města.
+
+### Posádka
+
+Hráč začíná s jedním kapitánem (jeden stroj). Pokud si ve městě najme dalšího, může začít stavět druhý stroj a operovat na dvou místech mapy zároveň.
+
+Členové posádky:
+- mechanik (bonus k opravám),
+- navigátor (bonus k pohybu),
+- obchodník (bonus k obchodování),
+- voják (bonus k boji).
+
+## Suroviny
+
+Herní suroviny:
+- Uhlí
+- Ruda
+- součástky
+- obilý
+
+Každý surovina má svou váhu, která zvyšuje zátěž stroje.
+
+Na začátku tahu hráč hodí kostkami. Padne například pětka. Hráči se podívají na město s číslem 5, zjistí, jakou kartu produkce dostalo při počátečním losování (např. Rudu), a fyzicky do tohoto města položí jednu novou dřevěnou kostičku Rudy z banku. Tím se neustále doplňují sklady a hráči se o tyto nově vygenerované zdroje mohou začít okamžitě přetahovat.
+
+## Boj
+
+Pokud osadíte svoje lodě zbraněni, tak můžte napdat prostředky ostatních hráčů. Pokud zvítězíte v boji, můžete poražené plavidlo oloupit. 
+
+Obrané prvky zvyšují obraný bonus k hodu kostkami. 
+
+Parní harpunu (+2 k dostřelu)
+Dělovou věž (+2 k útoku)
+Ocelové pláty (+2 k obraně)
+
+Hrajeme podle pravidel fair plunderingu, když dobiješ - můžeš okrást. Za jedno kolo se loď opraví.
+
+## Události a Trh (Events)
+Balíček, který řídí ekonomiku.
+
+Město X poptává 3x Uhlí.
+
+Město Y vyprodukovalo 2x Rudu (položí se na mapu).
+
+### Vylepšení měst
+
+Infrastrukturní úkoly v praxi
+Když se na nástěnce objeví úkol typu "Stavba parního rypadla", bude mít v rohu specifickou ikonu. Vyžaduje obvykle vzácnější nebo objemnější materiál. Jakmile ho hráč splní, proběhnou dvě věci:
+
+Hráč zinkasuje prémiovou odměnu (peníze/VB).
+
+Hráč položí na dané město na mapě "Upgrade žeton". Od tohoto momentu město při svém hodu na kostce produkuje dvojnásobek.
+
+## Příprava hry
+
+Práování karet měst - a produkce surovin.
+
+Hod kostkou v tahu hráče pak určuje, kdy byla vyprodukovaná jaká surovina.
+
+Balíčky se při setupu jednoduše zamíchají zvlášť a položí na sebe (III dole, II uprostřed, I nahoře). Jakmile dojdou karty z jedné éry, trh automaticky přechází do další fáze.
+- Éra I (Zahájení): Krátké trasy a základní suroviny (Uhlí, Ruda). Nízké odměny, které slouží primárně k zisku startovního kapitálu pro nákup prvních lepších modulů (silnější motor, větší sklad).
+- Éra II (Industrualizace): Delší trasy a poptávka po zpracovaných surovinách (Součástky). Zde se poprvé začnou na nástěnce objevovat první Infrastrukturní úkoly, které zvednou produkci na mapě přesně ve chvíli, kdy hráči začínají mít větší lodě a potřebují víc surovin.
+- Éra III (Zlatý věk): Komplexní zakázky, hybridní požadavky a drahé komodity. Obrovské odměny, tvrdý boj o přežití a o finální body.
+
+Do každé Éry zamícháš počet karet úkolů rovný počtu hráčů × X (například 4 hráči × 5 úkolů = 20 karet v každé éře). Tím zaručíš, že ať hrajete ve dvou nebo ve čtyřech, každý hráč odehraje zhruba stejný počet tahů a obě skupiny plynule dojdou až k ocelovým gigantům. Hra končí ve chvíli, kdy si někdo vezme poslední úkol z balíčku Éry III.
+
+## Začátek hry
+
+## Tah Hráče
+
+## Města
+
+### Upgrade
+
+Násobič (Více surovin): Zvýšení kapacity. Když na produkční kostce padne číslo tohoto města, nevygeneruje se 1 dřevěná kostička, ale 2 nebo 3.
+
+Rozšíření pravděpodobnosti (Častější spouštění): Pokud má město na začátku přidělené spouštěcí číslo 5, upgrade mu přidá i číslo 6. Tím se drasticky zvyšuje šance, že město vyprodukuje suroviny, protože ho aktivuje více výsledků hodu.
+
+
+Města získávají zdroje. 
+Kostičky různých bareve se rozmístují po herní mapě. 
+Úkoly - některá města požadují dodání určitých surovin.
+
+Počet hráčů +2, pokud je splněn úkol, lízne se další úkol z balíčku.
+
+Hráči putují po herních polích - hexagony (umožnují pohyb šesti směry).
+A plní herní úkoly, získávají tak menu a odměny v podobě vylepění.
+
+Karta ubykace -> umožnuje přidat posádku na stroj.
+
+Pohon určuje kolik karet může tvořit jeden prostředek.
+
+Nákladní prostor určuje kolik kostiček může být umístěno na loď. 
+
+Balíček událotí obsahuje města a co se tam stalo.
+
+Pokud jsou stroje na stejném poli, mohou spolu obchodovat.
+
+Na stroji může být maximálně tolik surovin kolik uveze.
+
+Stroj jde přestavět ve městě kde mají díly. Hráče to stojí jeden tah.
+
+Hráči mohou mít strojů kolik mají kapitánů. 
+
+
+Splněné úkoly 3 úrovně se naházejí do krabičky, ale nechávají se v odhazovacím balíčku aby je bylo možné zamýchat a připravot nový balíček, pokud hra ještě neskončila a úkoly došly. 
+
+Dvě kostky, pro každého hráče?
+
+## DLC
+
+Piráti a zloději
+Pohyb NPC: Pokud událost spawne na mapě pirátskou loď, kostky určují její pohyb (např. 1-2 na sever, 3-4 na jih).
