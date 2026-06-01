@@ -2,6 +2,10 @@ Jak bys chtěl vyřešit samotný začátek hry – dostanou všichni hráči id
 
 Aby se trh nezasekl na neatraktivních úkolech (například odlehlé město žádá levnou surovinu a nikomu se tam nechce jezdit), vyplatí se zavést jednoduchý mechanismus časování. Pokud úkol na nástěnce zůstane celé kolo, položíš na něj minci navíc. Jakmile se tam nakupí dost mincí, rázem se i špatná cesta stane lukrativní.
 
+Splněné úkoly 3 úrovně se naházejí do krabičky, ale nechávají se v odhazovacím balíčku aby je bylo možné zamýchat a připravot nový balíček, pokud hra ještě neskončila a úkoly došly. 
+
+# Výměna mezi hráči
+
 Z pohledu návrhu systémů je to jako vytvořit síťový bridge mezi dvěma oddělenými topologiemi. Parník představuje námořní linku s obrovskou propustností, kročec je zase terénní doručovatel. Jejich setkání v přístavním uzlu (Alexandrii) a výměna nákladu umožňuje hráčům budovat komplexní "hub and spoke" logistické řetězce, což je u deskových her tohoto typu absolutní svatý grál.
 
 Jelikož je ale hra kompetitivní a peníze se rovnají vítězným bodům, přináší přímý obchod mezi hráči dvě velmi reálná designová rizika, na která je potřeba myslet: "Analysis Paralysis" (hráči se budou 10 minut dohadovat o směnném kurzu, čímž se hra zastaví) a "Kingmaking" (hráč, který vidí, že už nevyhraje, daruje svůj náklad pod cenou jinému hráči, čímž mu uměle zajistí vítězství).

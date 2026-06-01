@@ -22,9 +22,24 @@
 
 Steampunkově/fantasy laděný "Pick-up and Deliver" spojený s "Tableau Building" (stavbou vlastního stroje z karet).
 
+![](./assets/cover_art.png)
+
+
 ## Mapa
 
+![](./assets/alps.png)
+
+Pevná hexová síť reprezentující steampunkový svět. Hexy jsou rozděleny na pevninu, vodu a překážky (hory, hluboké oceány).
+
+Topologie mapy obsahuje zúžená hrdla (chokepoints) jako jsou horské průsmyky a úžiny, které vynucují interakci mezi hráči.
+
+Na mapě je rozmístěn pevný počet Měst (uzlů). Každé město má přiřazenou kartu své produkce a spouštěcí číslo pro hod kostkou (např. 2-12).
+
+Města slouží jako překladiště, místa pro nabírání úkolů a loděnice pro přestavbu strojů.
+
 ## Cíl hry
+
+Hra je ekonomický závod. Vítězí ten, kdo má na konci hry největší finanční hotovost (peníze = vítězné body). Hra okamžitě končí ve chvíli, kdy je z centrální nástěnky odebrán poslední úkol z balíčku Éry III. Konec hry netriggruje žádné další bodování, počítá se čistě "cash".
 
 ## Dopravní prostředky
 
@@ -153,7 +168,33 @@ Do každé Éry zamícháš počet karet úkolů rovný počtu hráčů × X (na
 
 ## Začátek hry
 
+![](./assets/wolker.png)
+
+Setup světa: Na mapu se rozmístí žetony/karty produkce k jednotlivým městům. Na nástěnku se vyloží startovní úkoly z Éry I (počet hráčů + 2).
+
+Setup hráčů: Každý hráč obdrží Pilotní licenci, 1 kartu startovního Kapitána a fixní obnos startovních peněz.
+
+Stavba prvního stroje: Hráči si za startovní peníze okamžitě nakoupí své první moduly (Éra I - Dřevo a plachty) a sestaví svůj první dopravní prostředek ve svém domovském městě.
+
 ## Tah Hráče
+
+![](./assets/oasis.png)
+
+Tah každého hráče se skládá ze 4 fází:
+
+Fáze produkce (Svět): Hráč hodí dvěma kostkami. Do města, jehož číslo padlo, se přidá tolik surovin, jaká je úroveň jeho vylepšení (standardně 1 kostička).
+
+Fáze logistiky a akcí (Stroje): Hráč aktivuje své stroje. Za každého svého kapitána může aktivovat jeden stroj a provést s ním:
+
+Pohyb: Posun o tolik hexů, kolik je aktuální rychlost stroje (Výkon - Zátěž). Během pohybu nebo po něm může vyvolat Boj s jiným strojem na stejném hexu.
+
+Obchod a Naložení: Ve městě nebo na překladišti může stroj svobodně nakládat/vykládat suroviny do limitu svého nákladového prostoru a směňovat je za plnění úkolů z nástěnky.
+
+Alternativa - Přestavba: Místo pohybu a akcí může hráč stroj odstavit v loděnici (městě), zaplatit za nové moduly a stroj překonfigurovat. Tento stroj v daném kole ztrácí pohyb.
+
+Fáze údržby (Status): Odstranění stavu "V opravě" z vlastních strojů, které byly v minulém kole zničeny v boji.
+
+Fáze trhu: Pokud byly v tomto tahu splněny nějaké úkoly z nástěnky, doplní se nové z aktuálního balíčku Éry do plného počtu (hráči + 2).
 
 ## Města
 
@@ -190,7 +231,6 @@ Stroj jde přestavět ve městě kde mají díly. Hráče to stojí jeden tah.
 Hráči mohou mít strojů kolik mají kapitánů. 
 
 
-Splněné úkoly 3 úrovně se naházejí do krabičky, ale nechávají se v odhazovacím balíčku aby je bylo možné zamýchat a připravot nový balíček, pokud hra ještě neskončila a úkoly došly. 
 
 Dvě kostky, pro každého hráče?
 
