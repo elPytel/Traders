@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <!-- =====================
+       Shared enums and types
+       ===================== -->
+  <xs:simpleType name="DeckType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="quest" />
+      <xs:enumeration value="module_ship" />
+      <xs:enumeration value="module_airship" />
+      <xs:enumeration value="module_walker" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Restricts era to strictly 1, 2 or 3 -->
+  <xs:simpleType name="EraInt">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1" />
+      <xs:maxInclusive value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ModuleCategory">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="pohon" />
+      <xs:enumeration value="sklad" />
+      <xs:enumeration value="zbran" />
+      <xs:enumeration value="obrana" />
+      <xs:enumeration value="utility" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="CountInt">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1" />
+      <xs:maxInclusive value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="CardId">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z0-9_]+" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- =====================
+       Icons config
+       ===================== -->
+  <xs:complexType name="DeckIconEntry">
+    <xs:attribute name="name" type="DeckType" use="required" />
+    <xs:attribute name="back" type="xs:string" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="IconsBlock">
+    <xs:sequence>
+      <xs:element name="deck" type="DeckIconEntry" maxOccurs="unbounded" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- =====================
+       Variant blocks
+       ===================== -->
+  
+  <!-- Quest block handles standard tasks and infrastructure upgrades -->
+  <xs:complexType name="QuestBlock">
+    <xs:attribute name="era" type="EraInt" use="required" />
+    <xs:attribute name="city" type="xs:string" use="required" />
+    <xs:attribute name="wants" type="xs:string" use="required" />
+    <xs:attribute name="reward" type="xs:integer" use="required" />
+    <xs:attribute name="is_upgrade" type="xs:boolean" default="false" />
+    <xs:attribute name="image" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <!-- Module block handles physical properties for the engine building -->
+  <xs:complexType name="ModuleBlock">
+    <xs:attribute name="era" type="EraInt" use="required" />
+    <xs:attribute name="category" type="ModuleCategory" use="required" />
+    <xs:attribute name="power" type="xs:integer" default="0" />
+    <xs:attribute name="weight" type="xs:integer" default="0" />
+    <xs:attribute name="capacity" type="xs:integer" default="0" />
+    <xs:attribute name="image" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <!-- =====================
+       Card definition
+       ===================== -->
+  <xs:complexType name="Card">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" />
+      <xs:element name="subtitle" type="xs:string" minOccurs="0" />
+      <xs:element name="text" type="xs:string" />
+
+      <!-- Exactly ONE variant block per card -->
+      <xs:choice>
+        <xs:element name="quest" type="QuestBlock" />
+        <xs:element name="module" type="ModuleBlock" />
+      </xs:choice>
+    </xs:sequence>
+
+    <xs:attribute name="id" type="CardId" use="required" />
+    <xs:attribute name="count" type="CountInt" use="optional" />
+    <xs:attribute name="deck" type="DeckType" use="required" />
+  </xs:complexType>
+
+  <!-- =====================
+       Root
+       ===================== -->
+  <xs:element name="cards">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="icons" type="IconsBlock" minOccurs="0" maxOccurs="1" />
+        <xs:element name="card" type="Card" maxOccurs="unbounded" minOccurs="1" />
+      </xs:sequence>
+      <xs:attribute name="game" type="xs:string" use="optional" />
+      <xs:attribute name="version" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

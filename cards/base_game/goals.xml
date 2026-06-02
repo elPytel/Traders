@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cards game="Obchodnici" version="1.0">
+
+  <card id="quest_1_alexandrie_food" deck="quest" count="1">
+    <name>Hladový přístav</name>
+    <subtitle>Běžná zakázka</subtitle>
+    <text>Dělníci v docích odmítají pracovat o hladu. Nutně potřebují zásoby z oáz.</text>
+    <quest era="1" city="Alexandrie" wants="[ 🟨 🟨 ]" reward="8" is_upgrade="false" />
+  </card>
+
+  <card id="quest_1_nytov_ore" deck="quest" count="1">
+    <name>Rozpálení pecí</name>
+    <subtitle>Běžná zakázka</subtitle>
+    <text>Vysoké pece v Nýtově vyžadují surové železo pro první zkušební odlitky.</text>
+    <quest era="1" city="Nýtov" wants="[ 🟥 🟥 ]" reward="10" is_upgrade="false" />
+  </card>
+
+  <card id="quest_1_kiruna_coal" deck="quest" count="1">
+    <name>Arktický mráz</name>
+    <subtitle>Běžná zakázka</subtitle>
+    <text>Zima udeřila nečekaně brzy. Doly hrozí zamrznutím, pokud nedovezeš palivo.</text>
+    <quest era="1" city="Kiruna" wants="[ ⬛ ⬛ ]" reward="12" is_upgrade="false" />
+  </card>
+
+
+  <card id="quest_2_eisenklamm_upgrade" deck="quest" count="1">
+    <name>Parní rypadlo</name>
+    <subtitle>Infrastrukturní projekt</subtitle>
+    <text>Doruč těžkou techniku do průsmyku. Toto město od nynějška produkuje dvojnásobek.</text>
+    <quest era="2" city="Eisenklamm" wants="[ 🟦 🟦 ⬛ ]" reward="15" is_upgrade="true" />
+  </card>
+
+  <card id="quest_2_londonium_gears" deck="quest" count="1">
+    <name>Nová montovna</name>
+    <subtitle>Běžná zakázka</subtitle>
+    <text>Továrny rozšiřují výrobu a poptávají přesné strojní díly a uhlí pro generátory.</text>
+    <quest era="2" city="Londonium" wants="[ 🟦 ⬛ ⬛ ]" reward="18" is_upgrade="false" />
+  </card>
+
+  <card id="quest_2_petra_food" deck="quest" count="1">
+    <name>Zásoby pro kopáče</name>
+    <subtitle>Běžná zakázka</subtitle>
+    <text>Hlubinné práce ve skalním městě se protahují. Dělníci vyžadují jídlo a nářadí.</text>
+    <quest era="2" city="Petra" wants="[ 🟨 🟨 🟦 ]" reward="20" is_upgrade="false" />
+  </card>
+
+
+  <card id="quest_3_kovohrad_upgrade" deck="quest" count="1">
+    <name>Hlubinné vrty</name>
+    <subtitle>Infrastrukturní projekt</subtitle>
+    <text>Nainstaluj gigantická ocelová vrtná ústrojí. Toto město od nynějška produkuje dvojnásobek.</text>
+    <quest era="3" city="Kovohrad" wants="[ 🟦 🟦 🟦 ⬛ ]" reward="30" is_upgrade="true" />
+  </card>
+
+  <card id="quest_3_alexandrie_dreadnought" deck="quest" count="1">
+    <name>Stavba Dreadnoughtu</name>
+    <subtitle>Elitní zakázka</subtitle>
+    <text>Loděnice kompletuje trup vlajkové lodi. Zástupci admirality štědře zaplatí za materiál.</text>
+    <quest era="3" city="Alexandrie" wants="[ 🟥 🟥 🟥 🟦 ]" reward="35" is_upgrade="false" />
+  </card>
+
+  <card id="quest_3_khartoba_pumps" deck="quest" count="1">
+    <name>Zavlažovací systém</name>
+    <subtitle>Infrastrukturní projekt</subtitle>
+    <text>Přečerpávací stanice promění oázu v ráj. Toto město od nynějška produkuje dvojnásobek.</text>
+    <quest era="3" city="Khar-Toba" wants="[ 🟦 🟦 🟨 ⬛ ]" reward="28" is_upgrade="true" />
+  </card>
+
+</cards>
