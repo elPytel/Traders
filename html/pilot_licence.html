@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Pilotni licence - Minimal</title>
+  <style>
+    /* CSS variables for global theme management */
+    :root {
+      --bg-color: #ece7db;
+      --border-dark: #2c2a29;
+      --accent-red: #c62828;
+      --accent-blue: #1565c0;
+      --track-bg: #fff;
+    }
+
+    body {
+      font-family: "Arial", sans-serif;
+      background-color: #555;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      margin: 0;
+    }
+
+    @media print {
+      body { background: none; padding: 0; display: block; }
+      .dashboard { box-shadow: none; margin-bottom: 10mm; page-break-inside: avoid; }
+    }
+
+    /* Compact dashboard layout fitting multiple on A4 */
+    .dashboard {
+      width: 250mm;
+      height: 100mm;
+      background-color: var(--bg-color);
+      border: 3px solid var(--border-dark);
+      border-radius: 5mm;
+      box-sizing: border-box;
+      padding: 6mm;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      display: flex;
+      gap: 8mm;
+      align-items: center;
+    }
+
+    /* Card slot exactly for 63x88mm poker card */
+    .pilot-slot {
+      min-width: 63mm;
+      height: 88mm;
+      border: 2px dashed #777;
+      border-radius: 3mm;
+      background: rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #555;
+    }
+
+    .pilot-slot span {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 4.5mm;
+      letter-spacing: 1px;
+    }
+
+    /* Track section taking remaining space */
+    .tracks-container {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6mm;
+    }
+
+    .track-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 2mm;
+    }
+
+    .track-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .track-title {
+      font-weight: bold;
+      font-size: 5mm;
+      text-transform: uppercase;
+      color: var(--border-dark);
+    }
+
+    /* The actual tracker line */
+    .track {
+      display: flex;
+      background: var(--track-bg);
+      border: 2px solid var(--border-dark);
+      border-radius: 2mm;
+      overflow: hidden;
+    }
+
+    .track-box {
+      flex: 1;
+      height: 14mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5.5mm;
+      font-weight: bold;
+      border-right: 1px solid #ccc;
+      color: #333;
+    }
+
+    .track-box:last-child {
+      border-right: none;
+    }
+
+    /* Specific coloring for Speed */
+    .speed-track .track-title { color: var(--accent-blue); }
+    .speed-track .track { border-color: var(--accent-blue); }
+    
+    /* Specific coloring for HP */
+    .hp-track .track-title { color: var(--accent-red); }
+    .hp-track .track { border-color: var(--accent-red); }
+    
+    /* Highlight states for critical values */
+    .hp-track .track-box:nth-child(1),
+    .hp-track .track-box:nth-child(2) {
+      background: rgba(198, 40, 40, 0.15);
+      color: var(--accent-red);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dashboard">
+    
+    <div class="pilot-slot">
+      <span>Pilot</span>
+    </div>
+
+    <div class="tracks-container">
+      
+      <div class="track-wrapper speed-track">
+        <div class="track-header">
+          <div class="track-title">Rychlost stroje</div>
+        </div>
+        <div class="track">
+          <div class="track-box">0</div>
+          <div class="track-box">1</div>
+          <div class="track-box">2</div>
+          <div class="track-box">3</div>
+          <div class="track-box">4</div>
+          <div class="track-box">5</div>
+          <div class="track-box">6</div>
+          <div class="track-box">7</div>
+          <div class="track-box">8</div>
+          <div class="track-box">9</div>
+          <div class="track-box">10</div>
+        </div>
+      </div>
+
+      <div class="track-wrapper hp-track">
+        <div class="track-header">
+          <div class="track-title">Integrita trupu (Zivoty)</div>
+        </div>
+        <div class="track">
+          <div class="track-box">1</div>
+          <div class="track-box">2</div>
+          <div class="track-box">3</div>
+          <div class="track-box">4</div>
+          <div class="track-box">5</div>
+          <div class="track-box">6</div>
+          <div class="track-box">7</div>
+          <div class="track-box">8</div>
+          <div class="track-box">9</div>
+          <div class="track-box">10</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
