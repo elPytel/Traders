@@ -157,16 +157,8 @@ $(ASSETS_STAMP): $(shell find $(ASSETS_DIR) -type f) | $(HTML_DIR)
 	$(PY) $(TOOLS_DIR)/optimize_images.py $(ASSETS_DIR) $(HTML_DIR)/assets
 	@touch $@
 
-$(HTML_DIR)/kostky.html: $(HTML_SRC_DIR)/kostky.html | $(HTML_DIR)
-	@printf "$(YELLOW)Copying kostky.html to $(HTML_DIR)/$(RESET)\n"
-	cp $(HTML_SRC_DIR)/kostky.html $@
-
-$(HTML_DIR)/zetony.html: $(HTML_SRC_DIR)/zetony.html | $(HTML_DIR)
-	@printf "$(YELLOW)Copying zetony.html to $(HTML_DIR)/$(RESET)\n"
-	cp $(HTML_SRC_DIR)/zetony.html $@
-
 # HTML build now produces per-directory pages for tables and stats
-html: $(ASSETS_STAMP) html-rules $(HTML_CARDS) $(HTML_TABLE) $(HTML_DIR)/kostky.html $(HTML_DIR)/zetony.html | $(HTML_DIR)
+html: $(ASSETS_STAMP) html-rules $(HTML_CARDS) $(HTML_TABLE) | $(HTML_DIR)
 	@printf "$(YELLOW)Selected mode=$(BLUE)%s$(YELLOW) color=$(BLUE)%s$(RESET)\n" "${MODE}" "${COLOR}"
 	@printf "$(GREEN)HTML files generation complete.$(RESET)\n"
 

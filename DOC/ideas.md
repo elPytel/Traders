@@ -37,9 +37,35 @@ Hřbetní plachty
 Boční plachty
 Nohy
 
-Když budujeme moduly na základě tvého fyzikálního modelu (**Rychlost = Celkový výkon - Celková zátěž**), každý dopravní prostředek vlastně funguje jako hardwarový rig. Musíš pečlivě balancovat "výpočetní výkon" (motory) proti "zátěži" (pancíř a sklad), jinak si vytvoříš bottleneck a stroj se ani nepohne, případně bude sice bleskově rychlý, ale neuveze vůbec nic.
+Specifické moduly podle typu plavidla
+Zde je nástřel, jak by se mohly moduly lišit, abychom dodrželi mechaniku „Výkon vs. Zátěž“ a zároveň udrželi tvrdý parní/steampunkový vizuál:
 
-Zde je návrh modulů rozdělený do tří fází technologického progresu.
+1. Lodě (Dominance na vodě: Obrovská kapacita, hrubá síla, ale závislost na přístavech)
+Lodě mohou nést ten nejtěžší náklad a nejsilnější pancíř, ale potřebují masivní tah.
+
+Parní koleso (Pohon): Vysoký výkon, ale velká zátěž. Ideální pro těžkotonážní transporty rudy.
+
+Vodotěsné přepážky (Obrana): Extrémně zvyšují životy lodi, ale přidávají zátěž.
+
+Hluboký trup (Sklad): Pojme nejvíce kostiček ze všech typů, ale zásadně snižuje rychlost lodi na mělčinách.
+
+2. Vzducholodě (Dominance ve vzduchu: Rychlost a flexibilita, ale křehkost a malá kapacita)
+Ignorují terén, ale fyzikálně neunesou tuny surové oceli, takže se musí soustředit na drahé, lehké náklady (součástky).
+
+Přetlakový hořák (Pohon): Dává obrovskou rychlost, ale při poškození hrozí výbuch (křehké).
+
+Zesílený plynový vak (Obrana/Sklad): Dává nulovou zátěž, ale unese jen málo kostiček.
+
+Sklápěcí gondola (Utility): Umožňuje bezpečně nakládat z překladiště na mapě, aniž by vzducholoď musela fyzicky přistát (což šetří tahy).
+
+3. Chodci / Strandbeests (Dominance na souši: Průchodnost terénem, modularita)
+Jsou to mistři pouště a hor, kteří spoléhají na převody a kinetickou energii.
+
+Kloubová transmise (Pohon): Nevytváří absolutně nejvyšší rychlost, ale zcela ignoruje postihy za pohyb v písku nebo na horách.
+
+Prachové filtry (Obrana): Zabraňují poškození strojů během událostí typu "Písečná bouře" a snižují opotřebení.
+
+Závěsné sítě (Sklad): Lehké, ale nechrání náklad při boji (snadný cíl pro piráty).
 
 ## Éra I (Dřevo a plachty)
 

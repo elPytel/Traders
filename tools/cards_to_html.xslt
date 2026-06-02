@@ -3,15 +3,12 @@
 
   <xsl:output method="html" encoding="UTF-8" indent="yes"/>
 
-  <!-- Parameters -->
-  <xsl:param name="title" select="'New York Mafia - Cards'"/>
+  <xsl:param name="title" select="'Obchodnici - Cards'"/>
   <xsl:param name="mode" select="'front'"/>
   <xsl:param name="colorMode" select="'color'"/>
 
-  <!-- Constants -->
   <xsl:variable name="cardsPerPage" select="9"/>
 
-  <!-- Root HTML -->
   <xsl:template match="/cards">
     <html>
       <head>
@@ -68,7 +65,7 @@
           /* Half-art image container */
           .card-art {
             width: 100%;
-            height: 44mm;
+            height: 40mm;
             background-size: cover;
             background-position: center;
             position: relative;
@@ -76,11 +73,15 @@
             background-color: #333;
           }
 
+          /* Era specific colors applied to titles */
+          .era-1 .card-title { background: rgba(101, 67, 33, 0.85); }
+          .era-2 .card-title { background: rgba(60, 64, 72, 0.85); }
+          .era-3 .card-title { background: rgba(139, 0, 0, 0.85); }
+
           /* Overlay title */
           .card-title {
             position: absolute;
             top: 0; left: 0; width: 100%;
-            background: rgba(0, 0, 0, 0.75);
             color: #fff;
             padding: 2mm 3mm;
             box-sizing: border-box;
@@ -91,25 +92,77 @@
 
           /* Text body */
           .card-body {
-            padding: 4mm 4mm 4mm;
-            font-size: 3.6mm;
+            padding: 3mm;
+            font-size: 3.4mm;
             line-height: 1.3;
             text-align: center;
             flex-grow: 1;
             display: flex;
-            align-items: flex-start;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
           }
 
-          /* Massive VP badge */
-          .vp-badge {
+          .card-desc {
+            margin-bottom: 3mm;
+            flex-grow: 1;
+          }
+
+          /* Module Stats Bar */
+          .stats-bar {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            background: #e0dcd3;
+            border-top: 0.5mm solid #111;
+            padding: 2mm 0;
+            font-weight: bold;
+            font-size: 3.5mm;
+          }
+
+          .stat { display: flex; flex-direction: column; align-items: center; }
+          .stat.power { color: #2e7d32; }
+          .stat.weight { color: #c62828; }
+          .stat.capacity { color: #1565c0; }
+          .stat span { font-size: 2.5mm; color: #111; font-weight: normal; }
+
+          /* Quest details */
+          .quest-details {
+            width: 100%;
+            text-align: left;
+            font-size: 3.5mm;
+            background: #fff;
+            border: 0.5mm solid #111;
+            padding: 2mm;
+            box-sizing: border-box;
+            border-radius: 1mm;
+          }
+          
+          .quest-req { font-weight: bold; font-size: 4mm; text-align: center; margin-top: 1mm; letter-spacing: 1px; }
+
+          /* Upgrade Badge */
+          .upgrade-badge {
+            position: absolute;
+            top: 2mm; right: 2mm;
+            background: #ffb300;
+            color: #111;
+            font-weight: bold;
+            font-size: 2.5mm;
+            padding: 1mm 2mm;
+            border: 0.5mm solid #111;
+            border-radius: 1mm;
+            text-transform: uppercase;
+          }
+
+          /* Massive Reward badge */
+          .reward-badge {
             position: absolute;
             bottom: 2mm; right: 2mm;
             width: 14mm; height: 14mm;
             background: #111; color: #fbc02d;
             border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            font-size: 7mm; font-weight: bold; font-family: sans-serif;
+            font-size: 6mm; font-weight: bold; font-family: sans-serif;
             border: 0.5mm solid #fbc02d;
             box-shadow: 0 0 2mm rgba(0,0,0,0.5);
           }
@@ -136,7 +189,6 @@
     </html>
   </xsl:template>
 
-  <!-- Sum counts of nodes -->
   <xsl:template name="sum-counts">
     <xsl:param name="nodes"/>
     <xsl:choose>
@@ -159,7 +211,6 @@
     </xsl:choose>
   </xsl:template>
 
-  <!-- Paging logic is identical to Gnarl -->
   <xsl:template name="render-pages">
     <xsl:param name="side"/>
     <xsl:variable name="totalCount"><xsl:call-template name="sum-counts"><xsl:with-param name="nodes" select="/cards/card"/></xsl:call-template></xsl:variable>
@@ -234,7 +285,6 @@
     <xsl:param name="side"/>
     <xsl:choose>
       <xsl:when test="not($all)">
-        <!-- Empty slot placeholder -->
         <div class="card back" style="background-color: #fff; border-color: #ddd;"></div>
       </xsl:when>
       <xsl:otherwise>
@@ -269,14 +319,13 @@
     </xsl:choose>
   </xsl:template>
 
-  <!-- ==================== FRONT CARD RENDERING ==================== -->
   <xsl:template name="render-card-front">
     <xsl:param name="cardNode"/>
     
-    <!-- Extract image path from either event or goal block -->
-    <xsl:variable name="bgImg" select="($cardNode/event/@image | $cardNode/goal/@image)[1]"/>
+    <xsl:variable name="bgImg" select="($cardNode/quest/@image | $cardNode/module/@image)[1]"/>
+    <xsl:variable name="eraNum" select="($cardNode/quest/@era | $cardNode/module/@era)[1]"/>
 
-    <div class="card">
+    <div class="card era-{$eraNum}">
       <div class="card-art">
         <xsl:if test="string-length($bgImg) &gt; 0">
           <xsl:attribute name="style">background-image: url('<xsl:value-of select="$bgImg"/>');</xsl:attribute>
@@ -288,24 +337,54 @@
             <div class="title-sub"><xsl:value-of select="$cardNode/subtitle"/></div>
           </xsl:if>
         </div>
+
+        <xsl:if test="$cardNode/quest/@is_upgrade = 'true'">
+          <div class="upgrade-badge">Upgrade</div>
+        </xsl:if>
       </div>
       
       <div class="card-body">
-        <xsl:value-of select="$cardNode/text"/>
+        <div class="card-desc">
+          <xsl:value-of select="$cardNode/text"/>
+        </div>
+
+        <xsl:if test="$cardNode/quest">
+          <div class="quest-details">
+            <div>Místo: <strong><xsl:value-of select="$cardNode/quest/@city"/></strong></div>
+            <div class="quest-req"><xsl:value-of select="$cardNode/quest/@wants"/></div>
+          </div>
+          <div class="reward-badge"><xsl:value-of select="$cardNode/quest/@reward"/></div>
+        </xsl:if>
       </div>
 
-      <!-- Render Victory Points badge if it is a goal card -->
-      <xsl:if test="$cardNode/goal">
-        <div class="vp-badge"><xsl:value-of select="$cardNode/goal/@points"/></div>
+      <xsl:if test="$cardNode/module">
+        <div class="stats-bar">
+          <xsl:if test="$cardNode/module/@power &gt; 0">
+            <div class="stat power">
+              <xsl:value-of select="$cardNode/module/@power"/>
+              <span>Výkon</span>
+            </div>
+          </xsl:if>
+          <xsl:if test="$cardNode/module/@weight &gt; 0">
+            <div class="stat weight">
+              <xsl:value-of select="$cardNode/module/@weight"/>
+              <span>Zátěž</span>
+            </div>
+          </xsl:if>
+          <xsl:if test="$cardNode/module/@capacity &gt; 0">
+            <div class="stat capacity">
+              <xsl:value-of select="$cardNode/module/@capacity"/>
+              <span>Sklad</span>
+            </div>
+          </xsl:if>
+        </div>
       </xsl:if>
     </div>
   </xsl:template>
 
-  <!-- ==================== BACK CARD RENDERING ==================== -->
   <xsl:template name="render-card-back">
     <xsl:param name="cardNode"/>
     
-    <!-- Find back image path in the icons config based on the deck attribute -->
     <xsl:variable name="deckName" select="$cardNode/@deck"/>
     <xsl:variable name="backImg" select="/cards/icons/deck[@name=$deckName]/@back"/>
 

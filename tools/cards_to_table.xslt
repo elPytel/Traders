@@ -6,7 +6,7 @@
     <html>
       <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <title>New York Mafia — Cards Database</title>
+        <title>Obchodnici - Cards Database</title>
         <style>
           body{font-family:Arial,Helvetica,sans-serif;padding:16px}
           table{border-collapse:collapse;width:100%;margin-bottom:24px}
@@ -16,8 +16,10 @@
           .filters{margin-bottom:8px}
           .filters select{margin-right:8px;margin-bottom:8px}
           img.preview { max-width: 80px; max-height: 80px; border: 1px solid #ccc; }
+          .badge { padding: 2px 6px; border-radius: 4px; font-size: 0.9em; font-weight: bold; }
+          .bg-true { background: #ffd54f; color: #000; }
         </style>
-        <!-- Retained JS filtering logic from Gnarl -->
+        
         <script>
           document.addEventListener('DOMContentLoaded', function(){
             document.querySelectorAll('table.filterable').forEach(function(table){
@@ -53,18 +55,19 @@
         </script>
       </head>
       <body>
-        <h1>New York Mafia — Cards Database</h1>
+        <h1>Obchodnici - Cards Database</h1>
 
-        <!-- Events Table -->
-        <h2>Events (Události)</h2>
+        <h2>Quests (Ukoly a poptavky)</h2>
         <div class="filters"></div>
         <table class="filterable">
           <tr>
-            <th>ID</th><th>Count</th><th>Name</th><th>Text</th><th>Type</th><th>Image Preview</th>
+            <th>ID</th><th>Deck</th><th>Count</th><th>Name</th><th>Subtitle</th><th>Text</th>
+            <th>Era</th><th>City</th><th>Wants</th><th>Reward</th><th>Upgrade</th><th>Image</th>
           </tr>
-          <xsl:for-each select="card[event]">
+          <xsl:for-each select="card[quest]">
             <tr>
               <td><xsl:value-of select="@id"/></td>
+              <td class="col-deck"><xsl:value-of select="@deck"/></td>
               <td>
                 <xsl:choose>
                   <xsl:when test="@count"><xsl:value-of select="@count"/></xsl:when>
@@ -72,12 +75,21 @@
                 </xsl:choose>
               </td>
               <td><xsl:value-of select="name"/></td>
+              <td><xsl:value-of select="subtitle"/></td>
               <td><xsl:value-of select="text"/></td>
-              <td class="col-type"><xsl:value-of select="event/@type"/></td>
+              <td class="col-era"><xsl:value-of select="quest/@era"/></td>
+              <td class="col-city"><xsl:value-of select="quest/@city"/></td>
+              <td><xsl:value-of select="quest/@wants"/></td>
+              <td><xsl:value-of select="quest/@reward"/></td>
               <td>
-                <xsl:if test="string-length(event/@image) &gt; 0">
+                <xsl:if test="quest/@is_upgrade = 'true'">
+                  <span class="badge bg-true">UPGRADE</span>
+                </xsl:if>
+              </td>
+              <td>
+                <xsl:if test="string-length(quest/@image) &gt; 0">
                   <img class="preview">
-                    <xsl:attribute name="src"><xsl:value-of select="event/@image"/></xsl:attribute>
+                    <xsl:attribute name="src"><xsl:value-of select="quest/@image"/></xsl:attribute>
                   </img>
                 </xsl:if>
               </td>
@@ -85,16 +97,17 @@
           </xsl:for-each>
         </table>
 
-        <!-- Goals Table -->
-        <h2>Goals (Herní cíle)</h2>
+        <h2>Modules (Vylepseni stroju)</h2>
         <div class="filters"></div>
         <table class="filterable">
           <tr>
-            <th>ID</th><th>Count</th><th>Name</th><th>Subtitle</th><th>Text</th><th>Points</th><th>Image Preview</th>
+            <th>ID</th><th>Deck</th><th>Count</th><th>Name</th><th>Subtitle</th><th>Text</th>
+            <th>Era</th><th>Category</th><th>Power</th><th>Weight</th><th>Capacity</th><th>Image</th>
           </tr>
-          <xsl:for-each select="card[goal]">
+          <xsl:for-each select="card[module]">
             <tr>
               <td><xsl:value-of select="@id"/></td>
+              <td class="col-deck"><xsl:value-of select="@deck"/></td>
               <td>
                 <xsl:choose>
                   <xsl:when test="@count"><xsl:value-of select="@count"/></xsl:when>
@@ -102,13 +115,17 @@
                 </xsl:choose>
               </td>
               <td><xsl:value-of select="name"/></td>
-              <td class="col-subtitle"><xsl:value-of select="subtitle"/></td>
+              <td><xsl:value-of select="subtitle"/></td>
               <td><xsl:value-of select="text"/></td>
-              <td class="col-points"><xsl:value-of select="goal/@points"/></td>
+              <td class="col-era"><xsl:value-of select="module/@era"/></td>
+              <td class="col-category"><xsl:value-of select="module/@category"/></td>
+              <td><xsl:value-of select="module/@power"/></td>
+              <td><xsl:value-of select="module/@weight"/></td>
+              <td><xsl:value-of select="module/@capacity"/></td>
               <td>
-                <xsl:if test="string-length(goal/@image) &gt; 0">
+                <xsl:if test="string-length(module/@image) &gt; 0">
                   <img class="preview">
-                    <xsl:attribute name="src"><xsl:value-of select="goal/@image"/></xsl:attribute>
+                    <xsl:attribute name="src"><xsl:value-of select="module/@image"/></xsl:attribute>
                   </img>
                 </xsl:if>
               </td>
