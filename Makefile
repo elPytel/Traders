@@ -76,7 +76,7 @@ DEPS_LISTS := $(wildcard pip-dependencies.txt apt-dependencies.txt)
 
 .PHONY: all validate merge html-rules html-table html-cards html pdf clean deps help
 
-all: pdf 
+all: pdf html
 
 $(OUT_DIR):
 	mkdir -p $(OUT_DIR)
