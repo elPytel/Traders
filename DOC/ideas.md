@@ -2,6 +2,10 @@
 
 - [Nápady pro hru Traders](#nápady-pro-hru-traders)
 - [Vylepšení strojů](#vylepšení-strojů)
+  - [Éra I (Dřevo a plachty)](#éra-i-dřevo-a-plachty)
+  - [Éra II (Pára a železo)](#éra-ii-pára-a-železo)
+  - [Éra III (Ocel)](#éra-iii-ocel)
+  - [Speciální periferie (Utility)](#speciální-periferie-utility)
 - [Začátek hry](#začátek-hry)
 - [Města](#města)
   - [Upgrade měst](#upgrade-měst)
@@ -32,6 +36,63 @@ Kráčecí stroj:
 Hřbetní plachty
 Boční plachty
 Nohy
+
+Když budujeme moduly na základě tvého fyzikálního modelu (**Rychlost = Celkový výkon - Celková zátěž**), každý dopravní prostředek vlastně funguje jako hardwarový rig. Musíš pečlivě balancovat "výpočetní výkon" (motory) proti "zátěži" (pancíř a sklad), jinak si vytvoříš bottleneck a stroj se ani nepohne, případně bude sice bleskově rychlý, ale neuveze vůbec nic.
+
+Zde je návrh modulů rozdělený do tří fází technologického progresu.
+
+## Éra I (Dřevo a plachty)
+
+Tyto moduly jsou extrémně lehké a levné. Nedávají velký výkon, ale díky nulové zátěži umožňují rychlý start a flexibilitu v úvodní fázi hry. Jsou závislé na přírodních podmínkách a hrubé síle.
+
+| Název modulu | Typ | Výkon | Zátěž | Efekt / Kapacita |
+| --- | --- | --- | --- | --- |
+| **Hřbetní plachta** | Pohon | +2 | 0 | Žádný |
+| **Šlapací hřídel** | Pohon | +3 | 1 | Žádný |
+| **Lněné vaky** | Sklad | 0 | 0 | Kapacita: 1 kostička |
+| **Dřevěné koryto** | Sklad | 0 | 1 | Kapacita: 2 kostičky |
+| **Lanový harpunomet** | Zbraň | 0 | 1 | Útok: +1 |
+| **Zpevněné fošny** | Obrana | 0 | 1 | Obrana: +1, 1 Život navíc |
+
+## Éra II (Pára a železo)
+
+Nástup těžkého průmyslu. Moduly poskytují obrovskou kapacitu a palebnou sílu, ale jejich vlastní hmotnost masivně zatěžuje stroj. Zde začíná nutnost přesného plánování a optimalizace výkonu. U některých modulů se zavádí nutnost "spalování" paliva.
+
+| Název modulu | Typ | Výkon | Zátěž | Efekt / Kapacita |
+| --- | --- | --- | --- | --- |
+| **Parní kotel V2** | Pohon | +6 | 3 | Trvale blokuje 1 slot skladu (uhlí) |
+| **Těžký pístový motor** | Pohon | +8 | 5 | Žádný |
+| **Železný kontejner** | Sklad | 0 | 3 | Kapacita: 4 kostičky |
+| **Rotační kulomet** | Zbraň | 0 | 2 | Útok: +3 |
+| **Nýtované pláty** | Obrana | 0 | 3 | Obrana: +3, 2 Životy navíc |
+
+## Éra III (Ocel)
+
+End-game komponenty s obrovskou pořizovací cenou. Aetherové technologie umožňují obcházet fyzikální zákony zátěže, což hráčům otevírá cestu k extrémně efektivním logistickým trasám na konci hry.
+
+| Název modulu | Typ | Výkon | Zátěž | Efekt / Kapacita |
+| --- | --- | --- | --- | --- |
+| **parní turbína** | Pohon | +12 | 2 | Ignoruje postihy z horských hexů |
+| **Vysokotlaký kotel** | Pohon | +9 | 2 | Žádný |
+| **Ocelový gigant** | Pohon | +15 | 7 | Žádný |
+| **Vrstvený pancíř** | Obrana | 0 | 5 | Obrana: +5, 4 Životy navíc |
+| **Křižníkové dělo** | Zbraň | 0 | 4 | Útok: 4 |
+
+## Speciální periferie (Utility)
+
+Kromě hrubých čísel výkonu a kapacity může mít každý stroj dedikované rozšiřující sloty pro speciální vybavení. Tyto moduly mění pravidla hry pro konkrétní stroj a umožňují asymetrickou strategii.
+
+* **Navigační astroláb (Zátěž 0):** Umožňuje stroji jednou za tah ignorovat nepříznivý efekt počasí vytažený z balíčku událostí.
+* **Ubytovací kajuta (Zátěž 1):** Odemkne na stroji slot pro druhého člena posádky (například kombinace Mechanika a Vojáka na jedné lodi).
+
+Velký setrvačník 
+
+**Těžební rypadlo** Pokud stroj stojí na překladišti těžebního města (ruda, uhlí) ve chvíli, kdy tam padne produkce na kostce, hráč rovnou dostává jednu kostičku z banku navíc přímo do svého nákladového prostoru.
+
+
+Diferenciální převodovka (Zátěž 1): Optimalizuje přenos síly. Ignoruje postihy za pohyb v náročném terénu (např. horské průsmyky nebo zrádné proudy).
+
+Gyroskopický stabilizátor (Zátěž 1): Zvyšuje přesnost zbraní a manévrovatelnost. Snižuje zátěž všech připojených zbraní o polovinu (zaokrouhleno dolů).
 
 # Začátek hry
 Začátek hry – dostanou všichni hráči identický základní dřevěný stroj, nebo bude start asymetrický (někdo začne s dřevěnou lodí, někdo s malým chodcem a někdo s pomalou vzducholodí)?

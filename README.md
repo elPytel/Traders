@@ -3,6 +3,7 @@
 - [Obchodníci](#obchodníci)
   - [Mapa](#mapa)
   - [Cíl hry](#cíl-hry)
+  - [Obsah hry](#obsah-hry)
   - [Dopravní prostředky](#dopravní-prostředky)
     - [Pilotní licence](#pilotní-licence)
     - [Pohyb](#pohyb)
@@ -15,7 +16,7 @@
   - [Příprava hry](#příprava-hry)
   - [Tah Hráče](#tah-hráče)
     - [Boj](#boj)
-    - [Onchod mezi hráči](#onchod-mezi-hráči)
+    - [Obchod mezi hráči](#obchod-mezi-hráči)
   - [TODO:](#todo)
   - [DLC](#dlc)
 
@@ -43,6 +44,19 @@ A plní herní úkoly, získávají tak měnu a odměny v podobě vylepění.
 ## Cíl hry
 
 Hra je ekonomický závod. Vítězí ten, kdo má na konci hry největší finanční hotovost (peníze = vítězné body). Hra okamžitě končí ve chvíli, kdy je z centrální nástěnky odebrán poslední úkol z balíčku Epochy III.
+
+## Obsah hry
+
+Pytlík s dřevěnými kostičkami surovin (Uhlí, Ruda, Součástky, Obilí).
+Pilotní licence pro sledování stavu strojů. Kolíky pro rychlost a žetony pro životy.
+Kameny pro vylepšení měst.
+Symboly pro označení měst a jejich produkce.
+Karty vylepšení rozdělené do tří Epoch (I, II, III) pro:
+- lodě, vzducholodě, chodci
+
+Karty úkolů rozdělené do tří Epoch (I, II, III).
+
+
 
 ## Dopravní prostředky
 
@@ -131,6 +145,7 @@ Herní suroviny:
 - ⚙️ součástky
 - 🌾 obilý
 
+Barvy kostiček:
 - Uhlí: ⬛ (Černá)
 - Ruda: 🟥 (Červená)
 - Součástky: ⬜ (bílá/stříbrná)
@@ -163,6 +178,11 @@ Vylosování druhého číselného žetonu, který se umístí vedle toho původ
 
 ## Události a Trh (Events)
 
+
+- Epocha I (Zahájení): Nízké odměny, které slouží primárně k zisku startovního kapitálu pro nákup prvních lepších modulů (silnější motor, větší sklad).
+- Epocha II (Industrualizace): Zde se poprvé začnou na nástěnce objevovat první Infrastrukturní úkoly, které zvednou produkci na mapě přesně ve chvíli, kdy hráči začínají mít větší lodě a potřebují víc surovin.
+- Epocha III (Zlatý věk): Komplexní zakázky, hybridní požadavky a drahé komodity. Obrovské odměny, tvrdý boj o přežití a o finální body.
+
 Balíček událotí obsahuje města a co se tam stalo. Úkoly - některá města požadují dodání určitých surovin.
 
 Počet hráčů +2, pokud je splněn úkol, lízne se další úkol z balíčku.
@@ -181,22 +201,17 @@ Město Y vyprodukovalo 2x Rudu (položí se na mapu).
 
 Práování karet měst - a produkce surovin.
 
-Hod kostkou v tahu hráče pak určuje, kdy byla vyprodukovaná jaká surovina.
+Balíčky se při setupu jednoduše zamíchají zvlášť a položí zvlát. Jakmile dojdou karty z jedné éry, trh automaticky přechází do další fáze.
 
-Balíčky se při setupu jednoduše zamíchají zvlášť a položí na sebe (III dole, II uprostřed, I nahoře). Jakmile dojdou karty z jedné éry, trh automaticky přechází do další fáze.
-- Éra I (Zahájení): Krátké trasy a základní suroviny (Uhlí, Ruda). Nízké odměny, které slouží primárně k zisku startovního kapitálu pro nákup prvních lepších modulů (silnější motor, větší sklad).
-- Éra II (Industrualizace): Delší trasy a poptávka po zpracovaných surovinách (Součástky). Zde se poprvé začnou na nástěnce objevovat první Infrastrukturní úkoly, které zvednou produkci na mapě přesně ve chvíli, kdy hráči začínají mít větší lodě a potřebují víc surovin.
-- Éra III (Zlatý věk): Komplexní zakázky, hybridní požadavky a drahé komodity. Obrovské odměny, tvrdý boj o přežití a o finální body.
-
-Do každé Éry zamícháš počet karet úkolů rovný počtu hráčů × X (například 4 hráči × 5 úkolů = 20 karet v každé éře). Tím zaručíš, že ať hrajete ve dvou nebo ve čtyřech, každý hráč odehraje zhruba stejný počet tahů a obě skupiny plynule dojdou až k ocelovým gigantům. Hra končí ve chvíli, kdy si někdo vezme poslední úkol z balíčku Éry III.
+Do každé Epochy zamícháš počet karet úkolů rovný počtu hráčů × X (například 4 hráči × 5 úkolů = 20 karet v každé éře). Tím zaručíš, že ať hrajete ve dvou nebo ve čtyřech, každý hráč odehraje zhruba stejný počet tahů a obě skupiny plynule dojdou až k ocelovým gigantům. Hra končí ve chvíli, kdy si někdo vezme poslední úkol z balíčku Epochy III.
 
 ![](./assets/wolker.png)
 
-Setup světa: Na mapu se rozmístí žetony/karty produkce k jednotlivým městům. Na nástěnku se vyloží startovní úkoly z Éry I (počet hráčů + 2).
+Setup světa: Na mapu se rozmístí žetony/karty produkce k jednotlivým městům. Na nástěnku se vyloží startovní úkoly z Epochy I (počet hráčů + 2).
 
 Setup hráčů: Každý hráč obdrží Pilotní licenci, 1 kartu startovního Kapitána a fixní obnos startovních peněz.
 
-Stavba prvního stroje: Hráči si za startovní peníze okamžitě nakoupí své první moduly (Éra I - Dřevo a plachty) a sestaví svůj první dopravní prostředek ve svém domovském městě.
+Stavba prvního stroje: Hráči si za startovní peníze okamžitě nakoupí své první moduly (Epocha I - Dřevo a plachty) a sestaví svůj první dopravní prostředek ve svém domovském městě.
 
 ## Tah Hráče
 
@@ -216,7 +231,7 @@ Alternativa - Přestavba: Místo pohybu a akcí může hráč stroj odstavit v l
 
 Fáze údržby (Status): Odstranění stavu "V opravě" z vlastních strojů, které byly v minulém kole zničeny v boji.
 
-Fáze trhu: Pokud byly v tomto tahu splněny nějaké úkoly z nástěnky, doplní se nové z aktuálního balíčku Éry do plného počtu (hráči + 2).
+Fáze trhu: Pokud byly v tomto tahu splněny nějaké úkoly z nástěnky, doplní se nové z aktuálního balíčku Epochy III do plného počtu (hráči + 2).
 
 ### Boj
 
@@ -234,7 +249,7 @@ Zbraně s dostřelem 2 mohou střílet i na vzdálenost 1 (a také 0, pokud jsou
 
 Hrajeme podle pravidel fair plunderingu, když dobiješ - můžeš okrást. Za jedno kolo se loď opraví.
 
-### Onchod mezi hráči
+### Obchod mezi hráči
 
 Pokud jsou stroje na stejném poli, mohou spolu obchodovat.
 
