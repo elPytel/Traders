@@ -1,6 +1,7 @@
 # Nápady pro hru Traders
 
 - [Nápady pro hru Traders](#nápady-pro-hru-traders)
+- [Stroje](#stroje)
 - [Vylepšení strojů](#vylepšení-strojů)
   - [Éra I (Dřevo a plachty)](#éra-i-dřevo-a-plachty)
   - [Éra II (Pára a železo)](#éra-ii-pára-a-železo)
@@ -16,7 +17,21 @@
   - [3. Městská překladiště (Asynchronní výměna)](#3-městská-překladiště-asynchronní-výměna)
 
 
+# Stroje
+
+Anatomie řadového stroje
+Aby toto vrstvení fungovalo ergonomicky, stačí zavést jednoduchou prostorovou gramatiku. Každý stroj funguje jako vlaková souprava.
+
+- Velitelský můstek (Bokem): Pilotní licence leží nad řadou nebo vedle ní jako hlavní dashboard pro HP a rychlost.
+- Příď (První karta zleva): Karta Pohonu (motor, plachty). Definuje hrubou sílu stroje a vizuálně ho táhne kupředu.
+- Trup (Další karty v řadě): Sklady, zbraně, obrana a utility poskládané plynule za sebe. Dřevěné kostičky surovin hráči pokládají přímo na ilustrace skladů.
+
+Vizuálně to na stole zabírá krásný vodorovný pruh:
+[ Karta Motoru ] ➡️ [ Karta Skladu ] ➡️ [ Karta Skladu ] ➡️ [ Karta Děla ]
+
 # Vylepšení strojů
+
+Kolik nohou může mít chodec?
 
 Pohon určuje kolik karet může tvořit jeden prostředek.
 

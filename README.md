@@ -13,6 +13,8 @@ Dvě kostky, pro každého hráče?
 
 Jak bude řešena měna?
 
+Omezení velikosti prostředků?
+
 ## DLC
 
 Piráti a zloději

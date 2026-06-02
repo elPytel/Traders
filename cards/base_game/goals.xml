@@ -4,8 +4,9 @@
   <card id="quest_1_alexandrie_food" deck="quest" count="1">
     <name>Hladový přístav</name>
     <subtitle>Běžná zakázka</subtitle>
-    <text>Dělníci v docích odmítají pracovat o hladu. Nutně potřebují zásoby z oáz.</text>
-    <quest era="1" city="Alexandrie" wants="[ 🟨 🟨 ]" reward="8" is_upgrade="false" />
+    <text>Dělníci v docích odmítají pracovat o hladu. Nutně potřebují zásoby.</text>
+    <quest era="1" city="Alexandrie" wants="[ 🟨 🟨 ]" reward="8" is_upgrade="false"
+      image="assets/goals/alexandrie_food.png" />
   </card>
 
   <card id="quest_1_nytov_ore" deck="quest" count="1">

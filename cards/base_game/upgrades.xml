@@ -7,7 +7,7 @@
 
   <!-- SHIPS -->
   <card id="mod_ship_sail_1" deck="module_ship" count="3">
-    <name>Hřbetní plachta</name>
+    <name>Plachta</name>
     <subtitle>Základní pohon</subtitle>
     <text>Spolehlivý vítr do zad. Nulová zátěž, ale malý výkon.</text>
     <module era="1" category="pohon" power="2" weight="0" capacity="0" />
@@ -15,11 +15,18 @@
 
   <card id="mod_ship_storage_1" deck="module_ship" count="4">
     <name>Dřevěné podpalubí</name>
-    <text>Prostor utěsněný smolou a hrubými prkny.</text>
+    <text>Prostor utěsněný smůlou a hrubými prkny.</text>
     <module era="1" category="sklad" power="0" weight="1" capacity="2" />
   </card>
 
   <!-- WALKERS (Strandbeests) -->
+  <card id="mod_walk_sail_1" deck="module_walker" count="3">
+    <name>Hřbetní plachta</name>
+    <subtitle>Základní pohon</subtitle>
+    <text>Spolehlivý vítr do zad. Nulová zátěž, ale malý výkon.</text>
+    <module era="1" category="pohon" power="2" weight="0" capacity="0" />
+  </card>
+
   <card id="mod_walk_legs_1" deck="module_walker" count="3">
     <name>Šlapací hřídel</name>
     <subtitle>Kinetický pohon</subtitle>
@@ -29,16 +36,22 @@
 
   <card id="mod_walk_net_1" deck="module_walker" count="3">
     <name>Závěsné sítě</name>
-    <text>Extrémně lehké, ale náklad je zcela odhalen povětrnostním vlivům.</text>
+    <text>Extrémně lehké, ale velmi malé.</text>
     <module era="1" category="sklad" power="0" weight="0" capacity="1" />
   </card>
 
   <!-- AIRSHIPS -->
-  <card id="mod_air_gas_1" deck="module_airship" count="3">
-    <name>Hedvábný balón</name>
-    <subtitle>Horkovzdušný pohon</subtitle>
-    <text>Základní vztlak pro první vzduchoplavce.</text>
+  <card id="mod_air_sail_1" deck="module_airship" count="3">
+    <name>Boční plachty</name>
+    <subtitle>Malé plachty po stranách</subtitle>
+    <text>Základní pohon pro vzduchoplavce.</text>
     <module era="1" category="pohon" power="4" weight="0" capacity="0" />
+  </card>
+
+  <card id="mod_air_storage_1" deck="module_airship" count="4">
+    <name>Lehká gondola</name>
+    <text>Otevřená konstrukce z dřevěných trámů a plátna.</text>
+    <module era="1" category="sklad" power="0" weight="1" capacity="2" />
   </card>
 
   <!-- ========================================== -->
@@ -55,7 +68,7 @@
 
   <card id="mod_ship_iron_storage_2" deck="module_ship" count="2">
     <name>Železný kontejner</name>
-    <text>Těžká ocelová klec. Vydrží všechno, ale rapidně zpomalí loď.</text>
+    <text>Těžká ocelová klec. Prostorná, ale rapidně zpomalí loď.</text>
     <module era="2" category="sklad" power="0" weight="3" capacity="4" />
   </card>
 
@@ -63,22 +76,15 @@
   <card id="mod_walk_engine_2" deck="module_walker" count="2">
     <name>Parní písty</name>
     <subtitle>Mechanický krok</subtitle>
-    <text>Hlasitý, kouřící mechanismus, který posouvá ocelové nohy.</text>
+    <text>Hlasitý, kouřící mechanismus, který pohybuje s nohama.</text>
     <module era="2" category="pohon" power="5" weight="2" capacity="0" />
   </card>
 
-  <card id="mod_walk_utility_2" deck="module_walker" count="2">
-    <name>Prachové filtry</name>
-    <subtitle>Speciální vybavení</subtitle>
-    <text>Stroj je imunní vůči efektu Písečná bouře.</text>
-    <module era="2" category="utility" power="0" weight="1" capacity="0" />
-  </card>
-
   <!-- AIRSHIPS -->
-  <card id="mod_air_burner_2" deck="module_airship" count="2">
-    <name>Přetlakový hořák</name>
-    <subtitle>Agresivní tah</subtitle>
-    <text>Nebezpečně vysoký výkon. Hrozí riziko požáru při poškození.</text>
+  <card id="mod_air_engine_2" deck="module_airship" count="2">
+    <name>Parní motor</name>
+    <subtitle>Efektivní pohon</subtitle>
+    <text>Nespoléhej se jen na příznivý vítr!</text>
     <module era="2" category="pohon" power="8" weight="2" capacity="0" />
   </card>
 
@@ -91,9 +97,9 @@
   <card id="mod_ship_wpn_1" deck="module_ship" count="2">
     <name>Lanový harpunomet</name>
     <subtitle>Základní výzbroj</subtitle>
-    <text>Těžká harpuna pro poškození cizích plachet a trupů.</text>
+    <text>Těžká harpuna pro poškození cizích strojů.</text>
     <module era="1" category="zbran" power="0" weight="1" capacity="0" />
-    </card>
+  </card>
 
   <card id="mod_ship_arm_1" deck="module_ship" count="2">
     <name>Zpevněné fošny</name>
@@ -127,7 +133,6 @@
     <module era="1" category="obrana" power="0" weight="0" capacity="0" />
   </card>
 
-
   <card id="mod_ship_wpn_2" deck="module_ship" count="2">
     <name>Dělová věž</name>
     <subtitle>Těžká artilerie</subtitle>
@@ -141,30 +146,30 @@
     <module era="2" category="obrana" power="0" weight="3" capacity="0" />
   </card>
 
-  <card id="mod_walk_wpn_2" deck="module_walker" count="2">
+  <card id="mod_walk_wpn" deck="module_walker" count="2">
     <name>Parní dělo</name>
     <subtitle>Kinetická zbraň</subtitle>
     <text>Využívá přetlak z kotlů k vystřelení ocelových projektilů.</text>
-    <module era="2" category="zbran" power="0" weight="2" capacity="0" />
+    <module era="3" category="zbran" power="0" weight="2" capacity="0" />
   </card>
 
-  <card id="mod_walk_arm_2" deck="module_walker" count="2">
+  <card id="mod_walk_arm" deck="module_walker" count="2">
     <name>Ocelové štíty</name>
     <text>Sklápěcí štíty chránící citlivé mechanismy a nohy chodce.</text>
-    <module era="2" category="obrana" power="0" weight="2" capacity="0" />
+    <module era="3" category="obrana" power="0" weight="2" capacity="0" />
   </card>
 
-  <card id="mod_air_wpn_2" deck="module_airship" count="2">
+  <card id="mod_air_wpn" deck="module_airship" count="2">
     <name>Rotační kulomet</name>
     <subtitle>Rychlopalná zbraň</subtitle>
     <text>Extrémní rychlost palby kompenzuje menší ráži projektilů.</text>
-    <module era="2" category="zbran" power="0" weight="1" capacity="0" />
+    <module era="3" category="zbran" power="0" weight="1" capacity="0" />
   </card>
 
-  <card id="mod_air_arm_2" deck="module_airship" count="2">
+  <card id="mod_air_arm" deck="module_airship" count="2">
     <name>Kevlarová síť</name>
     <text>Lehká kovová vlákna vetkaná do pláště. Skvělá ochrana při minimální váze.</text>
-    <module era="2" category="obrana" power="0" weight="1" capacity="0" />
+    <module era="3" category="obrana" power="0" weight="1" capacity="0" />
   </card>
 
 </cards>

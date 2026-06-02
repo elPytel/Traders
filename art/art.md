@@ -6,6 +6,7 @@
     - [Beduín v poušti](#beduín-v-poušti)
     - [Vzducholod a Alpy](#vzducholod-a-alpy)
     - [Pouštní oáza](#pouštní-oáza)
+  - [Ilustrace karet](#ilustrace-karet)
 
 ## cover art
 
@@ -36,3 +37,7 @@ Vzducholoď s jeřábem zvedá velký náklad z oázy uprostřed pouště. Oáza
 
 > Prompt:
 High quality board game illustration of a giant steampunk airship with a crane lifting heavy cargo from a lush desert oasis. The oasis features green palm trees and a small clear pond. It is surrounded by large sand dunes. Wooden mechanical strandbeest walkers are standing all around the area. Bedouin tents are scattered across the sand. The scene looks like a bustling trading post in the middle of nowhere. Silhouettes of more airships arriving in the hazy background. Distant mountains on the horizon. Detailed and atmospheric concept art. Strong contrast between heavy technology and peaceful nature. No text.
+
+## Ilustrace karet
+
+High quality board game illustration of exhausted dock workers sitting on empty wooden cargo crates. They are dressed in dirty steampunk work clothes and refuse to work. Their faces show hunger and frustration. Massive steel mechanical cranes stand idle in the background. The atmosphere is grim and covered in industrial smog. Detailed character concept art, moody lighting, no text.
