@@ -9,6 +9,17 @@
 
   <xsl:variable name="cardsPerPage" select="9"/>
 
+  <!-- Recursive template to generate capacity slots (XSLT 1.0 style) -->
+  <xsl:template name="generate-slots">
+    <xsl:param name="count" select="0"/>
+    <xsl:if test="number($count) &gt; 0">
+      <div class="cube-slot"></div>
+      <xsl:call-template name="generate-slots">
+        <xsl:with-param name="count" select="number($count) - 1"/>
+      </xsl:call-template>
+    </xsl:if>
+  </xsl:template>
+
   <xsl:template match="/cards">
     <html>
       <head>
@@ -125,6 +136,33 @@
           .stat.weight { color: #c62828; }
           .stat.capacity { color: #1565c0; }
           .stat span { font-size: 2.5mm; color: #111; font-weight: normal; }
+
+          /* Cargo slots area for module capacity (physical resource cubes) */
+          .cargo-area {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2mm;
+            padding: 2mm;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 2mm;
+            margin: 2mm 0 4mm 0;
+          }
+
+          /* Exact physical dimension for one resource cube */
+          .cube-slot {
+            width: 12mm;
+            height: 12mm;
+            box-sizing: border-box;
+            border: 0.5mm solid rgba(0, 0, 0, 0.8);
+            background: repeating-linear-gradient(
+              45deg,
+              rgba(0, 0, 0, 0.05),
+              rgba(0, 0, 0, 0.05) 2mm,
+              rgba(0, 0, 0, 0.1) 2mm,
+              rgba(0, 0, 0, 0.1) 4mm
+            );
+          }
 
           /* Quest details */
           .quest-details {
@@ -347,6 +385,14 @@
         <div class="card-desc">
           <xsl:value-of select="$cardNode/text"/>
         </div>
+
+        <xsl:if test="$cardNode/module and number($cardNode/module/@capacity) &gt; 0">
+          <div class="cargo-area">
+            <xsl:call-template name="generate-slots">
+              <xsl:with-param name="count" select="number($cardNode/module/@capacity)"/>
+            </xsl:call-template>
+          </div>
+        </xsl:if>
 
         <xsl:if test="$cardNode/quest">
           <div class="quest-details">

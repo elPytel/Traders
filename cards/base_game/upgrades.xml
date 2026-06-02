@@ -19,6 +19,20 @@
     <module era="1" category="sklad" power="0" weight="1" capacity="2" />
   </card>
 
+  <card id="mod_ship_prid_1" deck="module_ship" count="3">
+    <name>Příď loďě</name>
+    <subtitle>Estetická příď</subtitle>
+    <text>Příď dřevěné loďě.</text>
+    <module era="1" category="sklad" capacity="2" position="prid" />
+  </card>
+
+  <card id="mod_ship_zad_1" deck="module_ship" count="3">
+    <name>Zádě loďě</name>
+    <subtitle>Estetická záď</subtitle>
+    <text>Záď dřevěné loďě.</text>
+    <module era="1" category="pohon" power="3" position="zad" />
+  </card>
+
   <!-- WALKERS (Strandbeests) -->
   <card id="mod_walk_sail_1" deck="module_walker" count="3">
     <name>Hřbetní plachta</name>
@@ -40,6 +54,13 @@
     <module era="1" category="sklad" power="0" weight="0" capacity="1" />
   </card>
 
+  <card id="mod_walk_prid_1" deck="module_walker" count="3">
+    <name>Příď chodce</name>
+    <subtitle>Estetická příď</subtitle>
+    <text>Přední konstrukční díl chodce; určeno pro vizuální sestavení a uchycení dalších modulů.</text>
+    <module era="1" category="sklad" capacity="2" position="prid" />
+  </card>
+
   <!-- AIRSHIPS -->
   <card id="mod_air_sail_1" deck="module_airship" count="3">
     <name>Boční plachty</name>
@@ -52,6 +73,20 @@
     <name>Lehká gondola</name>
     <text>Otevřená konstrukce z dřevěných trámů a plátna.</text>
     <module era="1" category="sklad" power="0" weight="1" capacity="2" />
+  </card>
+
+  <card id="mod_air_prid_1" deck="module_airship" count="3">
+    <name>Příď vzduchoplavce</name>
+    <subtitle>Estetická příď</subtitle>
+    <text>Přední část gondoly; stavební a estetický prvek bez přímých efektů na statistiky.</text>
+    <module era="1" category="sklad" capacity="2" position="prid" />
+  </card>
+
+  <card id="mod_air_zad_1" deck="module_airship" count="3">
+    <name>Zád vzduchoplavce</name>
+    <subtitle>Estetická záď</subtitle>
+    <text>Zadní část gondoly; strukturální prvek pro sestavení bez vlastních bonusů.</text>
+    <module era="1" category="sklad" capacity="2" position="zad" />
   </card>
 
   <!-- ========================================== -->

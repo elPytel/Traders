@@ -2,6 +2,7 @@
 
 - [Nápady pro hru Traders](#nápady-pro-hru-traders)
 - [Stroje](#stroje)
+  - [Návrh startovních podvozků (Éra I)](#návrh-startovních-podvozků-éra-i)
 - [Vylepšení strojů](#vylepšení-strojů)
   - [Éra I (Dřevo a plachty)](#éra-i-dřevo-a-plachty)
   - [Éra II (Pára a železo)](#éra-ii-pára-a-železo)
@@ -28,6 +29,36 @@ Aby toto vrstvení fungovalo ergonomicky, stačí zavést jednoduchou prostorovo
 
 Vizuálně to na stole zabírá krásný vodorovný pruh:
 [ Karta Motoru ] ➡️ [ Karta Skladu ] ➡️ [ Karta Skladu ] ➡️ [ Karta Děla ]
+
+## Návrh startovních podvozků (Éra I)
+Startovní karty musí dohromady dávat logický fyzikální smysl. Pokud sečteme příď a záď, musí vzniknout stroj, který se reálně pohne a něco uveze.
+
+1. Námořní Loď (Důraz na kapacitu)
+Příď a záď tvoří pomalý, ale velmi stabilní a prostorný základ.
+
+Příď: Dřevěný vaz (Výkon 3, Zátěž 1, Kapacita 0)
+
+Záď: Kormidelní paluba (Výkon 0, Zátěž 1, Kapacita 2)
+
+Stav na začátku hry: Rychlost 1, uveze 2 kostičky.
+
+2. Pouštní Chodec (Důraz na mobilitu)
+Chodci nemají od základu velké sklady, ale umí se hýbat plynule přes písečné duny kolem Khar-Toby.
+
+Příď: Navigační hlava (Výkon 1, Zátěž 0, Kapacita 0, Utility: Ignoruje postihy pouště)
+
+Záď: Šlapací mechanismus (Výkon 3, Zátěž 1, Kapacita 1)
+
+Stav na začátku hry: Rychlost 3, uveze 1 kostičku.
+
+3. Vzducholoď (Důraz na rychlost)
+Křehká struktura spoléhající na vztlak, obrovská rychlost, ale minimální startovní nosnost.
+
+Příď: Pozorovací gondola (Výkon 0, Zátěž 0, Kapacita 1)
+
+Záď: Ocasní ploutve (Výkon 4, Zátěž 0, Kapacita 0)
+
+Stav na začátku hry: Rychlost 4, uveze 1 kostičku.
 
 # Vylepšení strojů
 
