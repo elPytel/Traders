@@ -1,6 +1,7 @@
 # Nápady pro hru Traders
 
 - [Nápady pro hru Traders](#nápady-pro-hru-traders)
+- [Vizuální zpracování](#vizuální-zpracování)
 - [Stroje](#stroje)
   - [Návrh startovních podvozků (Éra I)](#návrh-startovních-podvozků-éra-i)
 - [Vylepšení strojů](#vylepšení-strojů)
@@ -17,6 +18,11 @@
   - [2. Logistické subdodávky (Smart Contracts)](#2-logistické-subdodávky-smart-contracts)
   - [3. Městská překladiště (Asynchronní výměna)](#3-městská-překladiště-asynchronní-výměna)
 
+# Vizuální zpracování
+
+Třípásmový layout: Karty jsou na výšku a vedle sebe. Trup lodi zabírá striktně jen prostřední vodorovný pruh. Horní a spodní okraj karty zůstává čistý a slouží výhradně pro texty, názvy a propojovací čáry. Tím vzniká neprůstřelný řád.
+
+Potlačené pozadí: Místo plnobarevné malby oceánu nebo pouště, která by vizuálně "křičela", je tu jen velmi jemná textura (světlé mraky). Díky tomu barevné herní kostky a samotný trup stroje na stole okamžitě vyniknou. Redukuje to vizuální šum na minimum
 
 # Stroje
 

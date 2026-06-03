@@ -7,6 +7,7 @@
     - [Pilotní licence](#pilotní-licence)
     - [Pohyb](#pohyb)
     - [Stavba a vylepšení](#stavba-a-vylepšení)
+      - [Chodec](#chodec)
     - [Posádka](#posádka)
   - [Suroviny](#suroviny)
   - [Města](#města)
@@ -122,6 +123,14 @@ Mají:
 - hmotnost,
 - bonusy
 
+#### Chodec
+
+Anatomie jednoho článku chodce
+Horní vrstva (Větrný pohon / Senzory): Kouká zpod horního okraje páteře. Tematicky jde o plachty, lapače větru nebo radary. Dodávají stroji rychlost nebo utility vlastnosti.
+
+Střední vrstva (Páteř / Náklad): Plně viditelná karta. Leží na ní dřevěné kostičky surovin a zleva doprava má rovné grafické ohraničení, aby na ni mohl plynule navázat další článek stonožky.
+
+Spodní vrstva (Nohy / Šasi): Kouká zpod spodního okraje páteře. Jde o masivní mechanické nohy nebo pásy, které definují hrubý výkon pro nesení zátěže a případnou imunitu vůči pouštnímu terénu.
 
 ### Posádka
 

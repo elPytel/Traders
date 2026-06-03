@@ -7,6 +7,15 @@
     - [Vzducholod a Alpy](#vzducholod-a-alpy)
     - [Pouštní oáza](#pouštní-oáza)
   - [Ilustrace karet](#ilustrace-karet)
+    - [Prompty pro univerzální rub karet](#prompty-pro-univerzální-rub-karet)
+  - [Části strojů](#části-strojů)
+    - [Příď lodi](#příď-lodi)
+    - [Trup lodi (Skladový nebo zbraňový modul)](#trup-lodi-skladový-nebo-zbraňový-modul)
+    - [Záď lodi](#záď-lodi)
+    - [Vzducholoď (Trup s plynovým vakem)](#vzducholoď-trup-s-plynovým-vakem)
+    - [Prompty pro generování článků (Pohled shora)](#prompty-pro-generování-článků-pohled-shora)
+    - [ÉRA I: Klasická dřevěná plachetnice](#éra-i-klasická-dřevěná-plachetnice)
+    - [ÉRA II: Přechodový železo-dřevěný parník](#éra-ii-přechodový-železo-dřevěný-parník)
 
 ## cover art
 
@@ -41,3 +50,117 @@ High quality board game illustration of a giant steampunk airship with a crane l
 ## Ilustrace karet
 
 High quality board game illustration of exhausted dock workers sitting on empty wooden cargo crates. They are dressed in dirty steampunk work clothes and refuse to work. Their faces show hunger and frustration. Massive steel mechanical cranes stand idle in the background. The atmosphere is grim and covered in industrial smog. Detailed character concept art, moody lighting, no text.
+
+### Prompty pro univerzální rub karet
+
+Univerzální rub nebo Éra I (Mosaz a kůže)
+
+Vertical portrait board game card back design. A symmetrical layout with a dark leather background framed by a heavy brass border with rivets. In the center is an ornate mechanical steampunk gear assembly. Highly detailed industrial art, symmetrical, completely empty top and bottom areas for text, no text.
+
+Éra II (Měď a železo)
+
+Vertical portrait board game card back design. A symmetrical layout with a dark riveted iron background framed by thick copper pipes. In the center is a glowing steam pressure gauge. Highly detailed industrial art, symmetrical, completely empty top and bottom areas for text, no text.
+
+Éra III (Těžká ocel)
+
+Vertical portrait board game card back design. A symmetrical layout with a dark oily steel background framed by heavy industrial metal plates. In the center is a massive spinning turbine. Highly detailed industrial art, symmetrical, completely empty top and bottom areas for text, no text.
+
+Éra I: Průzkum a lokální obchod
+Téma starých map, pergamenu a klasické navigace.
+
+Vertical portrait board game card back design. A symmetrical layout with an aged parchment map background. In the center is an ornate brass compass rose with delicate gears. Red wax seals and subtle navigational lines. Highly detailed art, symmetrical, completely empty top and bottom areas, no text.
+
+Éra II: Průmyslová expanze
+Téma technických výkresů, patentů a přesného měření.
+
+Vertical portrait board game card back design. A symmetrical layout with a dark blue technical blueprint background. In the center is a complex mechanical copper astrolabe. Geometric drafting lines and metallic compasses. Highly detailed art, symmetrical, completely empty top and bottom areas, no text.
+
+Éra III: Korporátní monopoly
+Téma nedobytných trezorů, těžkých smluv a vysokého byznysu.
+
+Vertical portrait board game card back design. A symmetrical layout with a dark elegant leather background framed by steel borders. In the center is a heavy mechanical vault lock made of gold and iron. Corporate official stamps. Highly detailed art, symmetrical, completely empty top and bottom areas, no text.
+
+
+## Části strojů
+
+Toto řešení přináší další obrovské výhody pro tvůj design:
+
+* **Logika nákladu:** Když umístíš ty poloprůhledné sloty pro kostičky přes obrázek, bude to reálně vypadat, že se hráč dívá shora do otevřeného nákladového prostoru nebo na rovnou palubu, kam zrovna jeřáb položil bedny. Hmatatelný zážitek se tím maximalizuje.
+* **Jednoduché napojování (API hran):** U pohledu shora je triviální definovat standardní šířku paluby. Levý i pravý okraj karty bude vždy končit rovnou čarou dřevěných prken nebo ocelového plátu. Na okrajích mohou být namalované roury, koleje nebo lávky, které při přiložení další karty vizuálně plynule navážou.
+
+Připravil jsem rovnou konceptuální prompty pro generátory, které toto pravidlo zohledňují. Prompty jsou opět v angličtině, používají pouze čárky a tečky, a jsou navrženy tak, aby z nich padala navazující grafika.
+
+### Příď lodi
+
+Epocha I
+
+Top down view of a wooden sailing ship bow on a vertical portrait board game card. The ship points to the left, crashing through deep blue ocean waves. The waves occupy the top and bottom of the image. The right edge of the ship deck is a perfectly straight vertical cut of wooden planks for seamless tiling. Late 18th century naval design, brass details, ropes, highly detailed art, no text.
+
+Epocha II
+
+Top down view of a middle section of a steampunk ship on a vertical portrait board game card. A flat wooden deck with iron pipes forms only a horizontal band in the center of the image running from the left edge to the right edge. Dark blue ocean waves are clearly visible at the top and bottom framing the ship. Highly detailed industrial art, no text.
+
+Epocha III
+
+Top down view of a heavy steampunk steel dreadnought ship bow on a vertical portrait board game card. The ship is oriented horizontally from left to right. The front of the ship features a massive iron ram pointing to the left, crashing through deep blue ocean waves. The waves occupy the top and bottom of the image. The right edge of the ship deck is a perfectly straight vertical iron cut for seamless tiling. Peak industrial design, thick riveted steel armor, steam vents, highly detailed art, no text.
+
+### Trup lodi (Skladový nebo zbraňový modul)
+
+Top down view of a middle section of a wooden sailing ship on a vertical portrait board game card. A flat wooden deck with cargo grates and thick ropes forms only a horizontal band in the center of the image running from the left edge to the right edge. Dark blue ocean waves are clearly visible at the top and bottom framing the ship. Both left and right edges are perfectly straight vertical cuts for seamless tiling. Late 18th century naval design, highly detailed art, no text.
+
+Top down view of a middle section of a steampunk ship on a vertical portrait board game card. The central horizontal band is a flat wooden deck with iron grates running from the left edge to the right edge. Both left and right edges are perfectly straight vertical cuts for seamless tiling. Dark blue ocean waves are visible at the top and bottom. Highly detailed industrial art, no text.
+
+Top down view of a middle section of a heavy steampunk steel dreadnought on a vertical portrait board game card. The ship is oriented horizontally from left to right. A flat deck made of thick riveted steel plates and heavy iron grates forms only a horizontal band in the center of the image running from the left edge to the right edge. Dark blue ocean waves are clearly visible at the top and bottom framing the ship. Both left and right edges are perfectly straight vertical iron cuts for seamless tiling. Peak industrial design, massive pipes, highly detailed art, no text.
+
+### Záď lodi
+
+Top down view of a wooden sailing ship stern on a vertical portrait board game card. The left edge of the deck is a perfectly straight vertical cut of wooden planks for seamless tiling. The right side features a wooden captain cabin and a large rudder leaving a white water trail in the ocean. Dark blue water surrounds the top and bottom. Late 18th century naval design, brass steering wheel, thick ropes, highly detailed art, no text.
+
+Top down view of an early steampunk ship stern on a vertical portrait board game card. A flat wooden deck is surrounded by a thick riveted iron hull. This structure forms only a horizontal band in the center of the image. The left edge of the deck is a perfectly straight vertical cut of wood and iron for seamless tiling. Dark blue ocean waves are clearly visible at the top and bottom framing the central ship band. The right side features a copper steam exhaust and early spinning brass propellers leaving a white water trail in the ocean. Highly detailed industrial art, no text. 
+
+Top down view of a heavy steampunk steel dreadnought ship stern on a vertical portrait board game card. A flat iron deck with metal grates and pipes forms only a horizontal band in the center of the image. The left edge of the deck is a perfectly straight vertical iron cut for seamless tiling. Dark blue ocean waves are clearly visible at the top and bottom framing the central ship band. The right side features a heavy metal exhaust and massive spinning brass propellers leaving a white water trail in the ocean. Highly detailed industrial art, no text.
+
+### Vzducholoď (Trup s plynovým vakem)
+
+Pohled shora na vzducholoď znamená, že uvidíme primárně obrovský vak, pod kterým jen tušíme gondolu.
+
+> Top down view of a giant steampunk zeppelin flying over a desert. The massive canvas gas bag is covered in metal patches and ropes. Both the front and back edges are straight for seamless tiling. Spinning propellers are attached to the sides. Board game card illustration, highly detailed, no text.
+
+### Prompty pro generování článků (Pohled shora)
+Zde jsou anglické prompty připravené pro generátor, které s touto mechanikou vrstvení počítají.
+
+Střední vrstva (Páteř se sloty pro náklad)
+
+Top down view of a steampunk desert walker central spine. The module is a flat iron platform designed to hold heavy cargo. The top and bottom edges are dark and shaded to allow other cards to be tucked underneath. The left and right edges are perfectly straight iron cuts with mechanical joints for seamless horizontal tiling. Board game card illustration, highly detailed, no text.
+
+Spodní vrstva (Kráčející nohy pro zasunutí zespodu)
+
+Top down view of mechanical steampunk spider legs stepping on a sandy desert. The top part of the image fades into a dark shadow as it is designed to be tucked under another card. Thick iron pistons, gears and hydraulic tubes are visible. Board game card illustration, highly detailed, no text.
+
+Horní vrstva (Plachta pro zasunutí shora)
+
+Top down view of a dirty canvas sail stretched over an iron frame in a steampunk style. The bottom part of the image fades into a dark shadow as it is meant to be tucked under another card. Ropes, brass pulleys and wind catchers are visible over a desert background. Board game card illustration, highly detailed, no text.
+
+### ÉRA I: Klasická dřevěná plachetnice
+
+**Příď (Startovací modul)**
+
+> Top down view of a wooden sailing ship bow on a vertical portrait board game card. The ship is oriented horizontally from left to right. The front of the ship points to the left, crashing through deep blue ocean waves. The waves occupy the top and bottom of the image. The right edge of the ship deck is a perfectly straight vertical cut of wooden planks for seamless tiling. Late 18th century naval design, brass details, ropes, highly detailed art, no text.
+
+**Trup (Středový sklad)**
+
+> Top down view of a middle section of a wooden sailing ship on a vertical portrait board game card. The ship is oriented horizontally from left to right. A flat wooden deck with cargo grates and thick ropes forms only a horizontal band in the center of the image running from the left edge to the right edge. Dark blue ocean waves are clearly visible at the top and bottom framing the ship. Both left and right edges are perfectly straight vertical cuts for seamless tiling. Late 18th century naval design, highly detailed art, no text.
+
+**Záď (Tlačný modul s kormidlem)**
+
+> Top down view of a wooden sailing ship stern on a vertical portrait board game card. The ship is oriented horizontally from left to right. The left edge of the deck is a perfectly straight vertical cut of wooden planks for seamless tiling. The right side features a wooden captain cabin and a large rudder leaving a white water trail in the ocean. Dark blue water surrounds the top and bottom framing the central ship band. Late 18th century naval design, brass steering wheel, thick ropes, highly detailed art, no text.
+
+### ÉRA II: Přechodový železo-dřevěný parník
+
+**Trup (Středový skladový modul)**
+
+> Top down view of a middle section of an early steampunk ship on a vertical portrait board game card. The ship is oriented horizontally from left to right. A flat wooden deck is surrounded by a thick riveted iron hull. This structure forms only a horizontal band in the center of the image running from the left edge to the right edge. Dark blue ocean waves are clearly visible at the top and bottom framing the ship. Both left and right edges are perfectly straight vertical cuts of wood and iron for seamless tiling. Highly detailed industrial art, no text.
+
+**Záď (Tlačný parní modul)**
+
+> Top down view of an early steampunk ship stern on a vertical portrait board game card. The ship is oriented horizontally from left to right. A flat wooden deck is surrounded by a thick riveted iron hull. This structure forms only a horizontal band in the center of the image. The left edge of the deck is a perfectly straight vertical cut of wood and iron for seamless tiling. Dark blue ocean waves are clearly visible at the top and bottom framing the central ship band. The right side features a copper steam exhaust and early spinning brass propellers leaving a white water trail in the ocean. Highly detailed industrial art, no text.

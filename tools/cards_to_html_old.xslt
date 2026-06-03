@@ -119,28 +119,6 @@
             flex-grow: 1;
           }
 
-          /* Header and footer for letterbox layout */
-          .card-header {
-            height: 16mm;
-            padding: 2mm 3mm;
-            background: rgba(44,42,41,0.75); /* more transparent */
-            color: #fff;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-          }
-
-          .card-footer {
-            flex-grow: 1;
-            background: rgba(236,231,219,0.7); /* more transparent */
-            padding: 2mm;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-sizing: border-box;
-          }
-
           /* Module Stats Bar */
           .stats-bar {
             display: flex;
@@ -237,40 +215,6 @@
             background-position: center;
             background-color: #111;
           }
-
-          /* Card back with mirrored banners */
-          .card-back {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            background-size: cover;
-            background-position: center;
-            background-image: url('back_base.png');
-          }
-
-          /* Container for the text banners */
-          .back-banner {
-            height: 20mm;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #d4af37;
-            text-shadow: 1px 1px 2px #000;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            box-sizing: border-box;
-            padding: 1mm 2mm;
-          }
-
-          /* Rotate the bottom banner */
-          .back-banner.bottom {
-            transform: rotate(180deg);
-          }
-
-          .banner-type { font-size: 14pt; }
-          .banner-era { font-size: 16pt; opacity: 0.8; }
         </style>
       </head>
       <body>
@@ -424,21 +368,21 @@
     <xsl:variable name="eraNum" select="($cardNode/quest/@era | $cardNode/module/@era)[1]"/>
 
     <div class="card era-{$eraNum}">
-        <div class="card-header">
+      <div class="card-art">
+        <xsl:if test="string-length($bgImg) &gt; 0">
+          <xsl:attribute name="style">background-image: url('<xsl:value-of select="$bgImg"/>');</xsl:attribute>
+        </xsl:if>
+        
+        <div class="card-title">
           <div class="title-main"><xsl:value-of select="$cardNode/name"/></div>
           <xsl:if test="$cardNode/subtitle">
             <div class="title-sub"><xsl:value-of select="$cardNode/subtitle"/></div>
           </xsl:if>
         </div>
 
-        <div class="card-art">
-          <xsl:if test="string-length($bgImg) &gt; 0">
-            <xsl:attribute name="style">background-image: url('<xsl:value-of select="$bgImg"/>');</xsl:attribute>
-          </xsl:if>
-
-          <xsl:if test="$cardNode/quest/@is_upgrade = 'true'">
-            <div class="upgrade-badge">Upgrade</div>
-          </xsl:if>
+        <xsl:if test="$cardNode/quest/@is_upgrade = 'true'">
+          <div class="upgrade-badge">Upgrade</div>
+        </xsl:if>
 
           <xsl:if test="$cardNode/module and number($cardNode/module/@capacity) &gt; 0">
             <div class="cargo-area">
@@ -447,45 +391,44 @@
               </xsl:call-template>
             </div>
           </xsl:if>
-        </div>
-
-        <div class="card-footer">
-          <div class="card-desc">
-            <xsl:value-of select="$cardNode/text"/>
-          </div>
-
-          <xsl:if test="$cardNode/quest">
-            <div class="quest-details">
-              <div>Místo: <strong><xsl:value-of select="$cardNode/quest/@city"/></strong></div>
-              <div class="quest-req"><xsl:value-of select="$cardNode/quest/@wants"/></div>
-            </div>
-            <div class="reward-badge"><xsl:value-of select="$cardNode/quest/@reward"/></div>
-          </xsl:if>
+      </div>
       
-          <xsl:if test="$cardNode/module">
-            <div class="stats-bar">
-              <xsl:if test="$cardNode/module/@power &gt; 0">
-                <div class="stat power">
-                  <xsl:value-of select="$cardNode/module/@power"/>
-                  <span>Výkon</span>
-                </div>
-              </xsl:if>
-              <xsl:if test="$cardNode/module/@weight &gt; 0">
-                <div class="stat weight">
-                  <xsl:value-of select="$cardNode/module/@weight"/>
-                  <span>Zátěž</span>
-                </div>
-              </xsl:if>
-              <xsl:if test="$cardNode/module/@capacity &gt; 0">
-                <div class="stat capacity">
-                  <xsl:value-of select="$cardNode/module/@capacity"/>
-                  <span>Sklad</span>
-                </div>
-              </xsl:if>
+      <div class="card-body">
+        <div class="card-desc">
+          <xsl:value-of select="$cardNode/text"/>
+        </div>
+
+        <xsl:if test="$cardNode/quest">
+          <div class="quest-details">
+            <div>Místo: <strong><xsl:value-of select="$cardNode/quest/@city"/></strong></div>
+            <div class="quest-req"><xsl:value-of select="$cardNode/quest/@wants"/></div>
+          </div>
+          <div class="reward-badge"><xsl:value-of select="$cardNode/quest/@reward"/></div>
+        </xsl:if>
+      </div>
+
+      <xsl:if test="$cardNode/module">
+        <div class="stats-bar">
+          <xsl:if test="$cardNode/module/@power &gt; 0">
+            <div class="stat power">
+              <xsl:value-of select="$cardNode/module/@power"/>
+              <span>Výkon</span>
+            </div>
+          </xsl:if>
+          <xsl:if test="$cardNode/module/@weight &gt; 0">
+            <div class="stat weight">
+              <xsl:value-of select="$cardNode/module/@weight"/>
+              <span>Zátěž</span>
+            </div>
+          </xsl:if>
+          <xsl:if test="$cardNode/module/@capacity &gt; 0">
+            <div class="stat capacity">
+              <xsl:value-of select="$cardNode/module/@capacity"/>
+              <span>Sklad</span>
             </div>
           </xsl:if>
         </div>
-
+      </xsl:if>
     </div>
   </xsl:template>
 
@@ -493,50 +436,12 @@
     <xsl:param name="cardNode"/>
     
     <xsl:variable name="deckName" select="$cardNode/@deck"/>
-    <xsl:variable name="eraNumBack" select="($cardNode/module/@era | $cardNode/quest/@era)[1]"/>
-    <!-- Default to era 1 when not available -->
-    <xsl:variable name="eraNum">
-      <xsl:choose>
-        <xsl:when test="string-length(normalize-space($eraNumBack)) &gt; 0"><xsl:value-of select="$eraNumBack"/></xsl:when>
-        <xsl:otherwise>1</xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
+    <xsl:variable name="backImg" select="/cards/icons/deck[@name=$deckName]/@back"/>
 
-    <!-- If deck name starts with 'module_' use era-specific module back images.
-         If deck is 'quest' use era-specific quest back images.
-         Otherwise fall back to icons mapping -->
-    <xsl:variable name="backImg">
-      <xsl:choose>
-        <xsl:when test="substring($deckName,1,7) = 'module_'">
-          <xsl:value-of select="concat('assets/back_modules_', $eraNum, '.png')"/>
-        </xsl:when>
-        <xsl:when test="$deckName = 'quest'">
-          <xsl:value-of select="concat('assets/back_quests_', $eraNum, '.png')"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:value-of select="/cards/icons/deck[@name=$deckName]/@back"/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
-
-    <!-- Back layout with mirrored banners containing machine type and era -->
-    <xsl:variable name="machineType" select="$cardNode/module/@type"/>
-    <div class="card card-back era-{$eraNum}">
+    <div class="card back">
       <xsl:if test="string-length($backImg) &gt; 0">
         <xsl:attribute name="style">background-image: url('<xsl:value-of select="$backImg"/>');</xsl:attribute>
       </xsl:if>
-
-      <!-- Top text -->
-      <div class="back-banner top">
-        <div class="banner-type"><xsl:value-of select="$machineType"/></div>
-        <div class="banner-era">Epocha <xsl:value-of select="$eraNum"/></div>
-      </div>
-
-      <!-- Bottom text rotated 180deg for symmetry -->
-      <div class="back-banner bottom">
-        <div class="banner-type"><xsl:value-of select="$machineType"/></div>
-        <div class="banner-era">Epocha <xsl:value-of select="$eraNum"/></div>
-      </div>
     </div>
   </xsl:template>
 
