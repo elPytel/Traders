@@ -587,8 +587,17 @@
       </xsl:choose>
     </xsl:variable>
 
-    <!-- Back layout with mirrored banners containing machine type and era -->
-    <xsl:variable name="machineType" select="$cardNode/module/@type"/>
+    <!-- Back layout with mirrored banners containing machine vehicle and era -->
+    <xsl:variable name="machineType">
+      <xsl:choose>
+        <xsl:when test="$cardNode/@deck='quest'">Zakázka</xsl:when>
+        <xsl:when test="$cardNode/module/@vehicle">
+          <xsl:value-of select="$cardNode/module/@vehicle"/>
+        </xsl:when>
+        <xsl:otherwise></xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+
     <div class="card card-back era-{$eraNum}">
       <xsl:if test="string-length($backImg) &gt; 0">
         <xsl:attribute name="style">background-image: url('<xsl:value-of select="$backImg"/>');</xsl:attribute>

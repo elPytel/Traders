@@ -23,13 +23,11 @@
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="ModuleCategory">
+  <xs:simpleType name="ModuleVehicle">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="pohon" />
-      <xs:enumeration value="sklad" />
-      <xs:enumeration value="zbran" />
-      <xs:enumeration value="obrana" />
-      <xs:enumeration value="utility" />
+      <xs:enumeration value="ship" />
+      <xs:enumeration value="airship" />
+      <xs:enumeration value="walker" />
     </xs:restriction>
   </xs:simpleType>
 
@@ -85,7 +83,7 @@
   <!-- Module block handles physical properties for the engine building -->
   <xs:complexType name="ModuleBlock">
     <xs:attribute name="era" type="EraInt" use="required" />
-    <xs:attribute name="category" type="ModuleCategory" use="required" />
+    <xs:attribute name="vehicle" type="ModuleVehicle" use="required" />
     <xs:attribute name="power" type="xs:integer" default="0" />
     <xs:attribute name="weight" type="xs:integer" default="0" />
     <xs:attribute name="capacity" type="xs:integer" default="0" />

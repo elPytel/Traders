@@ -102,7 +102,7 @@
         <table class="filterable">
           <tr>
             <th>ID</th><th>Deck</th><th>Count</th><th>Name</th><th>Subtitle</th><th>Text</th>
-            <th>Era</th><th>Category</th><th>Power</th><th>Weight</th><th>Capacity</th><th>Image</th>
+            <th>Era</th><th>Vehicle</th><th>Power</th><th>Weight</th><th>Capacity</th><th>Image</th>
           </tr>
           <xsl:for-each select="card[module]">
             <tr>
@@ -118,7 +118,7 @@
               <td><xsl:value-of select="subtitle"/></td>
               <td><xsl:value-of select="text"/></td>
               <td class="col-era"><xsl:value-of select="module/@era"/></td>
-              <td class="col-category"><xsl:value-of select="module/@category"/></td>
+              <td class="col-vehicle"><xsl:value-of select="module/@vehicle"/></td>
               <td><xsl:value-of select="module/@power"/></td>
               <td><xsl:value-of select="module/@weight"/></td>
               <td><xsl:value-of select="module/@capacity"/></td>

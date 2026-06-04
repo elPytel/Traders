@@ -154,7 +154,7 @@ Herní suroviny:
 Barvy kostiček:
 - Uhlí: ⬛ (Černá)
 - Ruda: 🟥 (Červená)
-- Součástky: ⬜ (bílá/stříbrná)
+- Součástky: 🟦 (Modrá)
 - Obilí: 🟨 (Žlutá)
 
 Na stroji může být maximálně tolik kusů surovin kolik uveze (kapacita nákladního prostoru). Každý surovina má váhu 1, která zvyšuje zátěž stroje a tím ho zpomaluje.
