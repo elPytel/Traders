@@ -8,85 +8,116 @@
   <!-- SHIPS -->
   <card id="mod_ship_sail_1" deck="module_ship" count="3">
     <name>Plachta</name>
-    <subtitle>Základní pohon</subtitle>
-    <text>Spolehlivý vítr do zad. Nulová zátěž, ale malý výkon.</text>
+    <subtitle>Spolehlivý vítr do zad.</subtitle>
+    <text></text>
     <module era="1" category="pohon" power="2" weight="0" capacity="0" image="assets/modules/ship_wood_mid.png"/>
   </card>
 
   <card id="mod_ship_storage_1" deck="module_ship" count="4">
     <name>Dřevěné podpalubí</name>
-    <text>Prostor utěsněný smůlou a hrubými prkny.</text>
+    <subtitle>Prostor utěsněný smůlou a hrubými prkny.</subtitle>
+    <text></text>
     <module era="1" category="sklad" power="0" weight="1" capacity="2" image="assets/modules/ship_wood_mid.png"/>
   </card>
 
   <card id="mod_ship_prid_1" deck="module_ship" count="3">
     <name>Příď lodě</name>
-    <subtitle>Estetická příď</subtitle>
-    <text>Příď dřevěné lodě.</text>
+    <subtitle>Příď dřevěné lodě.</subtitle>
+    <text></text>
     <module era="1" category="sklad" capacity="2" position="prid" image="assets/modules/ship_wood_bow.png"/>
   </card>
 
   <card id="mod_ship_zad_1" deck="module_ship" count="3">
     <name>Zádě loďě</name>
-    <subtitle>Estetická záď</subtitle>
-    <text>Záď dřevěné loďě.</text>
+    <subtitle>Záď dřevěné loďě.</subtitle>
+    <text></text>
     <module era="1" category="pohon" power="3" position="zad" image="assets/modules/ship_wood_stern.png"/>
+  </card>
+
+  <card id="mod_ship_wpn_1" deck="module_ship" count="2">
+    <name>Lanový harpunomet</name>
+    <subtitle>Těžká harpuna pro poškození cizích strojů.</subtitle>
+    <text></text>
+    <module era="1" category="zbran" power="0" weight="1" capacity="0" damage="1" image="assets/modules/ship_wood_mid.png"/>
+  </card>
+
+  <card id="mod_ship_arm_1" deck="module_ship" count="2">
+    <name>Zpevněné fošny</name>
+    <subtitle>Zdvojená vrstva dřeva na bocích lodi.</subtitle>
+    <text></text>
+    <module era="1" category="obrana" power="0" weight="1" capacity="0" armor="1" image="assets/modules/ship_wood_mid.png"/>
   </card>
 
   <!-- WALKERS (Strandbeests) -->
   <card id="mod_walk_sail_1" deck="module_walker" count="3">
     <name>Hřbetní plachta</name>
-    <subtitle>Základní pohon</subtitle>
-    <text>Spolehlivý vítr do zad. Nulová zátěž, ale malý výkon.</text>
-    <module era="1" category="pohon" power="2" weight="0" capacity="0" />
+    <subtitle>S větrem do zad.</subtitle>
+    <text></text>
+    <module era="1" category="pohon" power="2" weight="0" capacity="0" image="assets/modules/walker_wood_sail.png"/>
   </card>
 
   <card id="mod_walk_legs_1" deck="module_walker" count="3">
     <name>Šlapací hřídel</name>
-    <subtitle>Kinetický pohon</subtitle>
-    <text>Soustava dřevěných nohou poháněná lidskou silou a větrem.</text>
-    <module era="1" category="pohon" power="3" weight="1" capacity="0" />
+    <subtitle>Soustava dřevěných nohou</subtitle>
+    <text></text>
+    <module era="1" category="pohon" power="3" weight="1" capacity="0" image="assets/modules/walker_wood_legs.png"/>
   </card>
 
   <card id="mod_walk_net_1" deck="module_walker" count="3">
     <name>Závěsné sítě</name>
-    <text>Extrémně lehké, ale velmi malé.</text>
-    <module era="1" category="sklad" power="0" weight="0" capacity="1" />
+    <subtitle>Extrémně lehké, ale velmi malé.</subtitle>
+    <text></text>
+    <module era="1" category="sklad" power="0" weight="0" capacity="1" image="assets/modules/walker_wood_mid.png"/>
   </card>
 
   <card id="mod_walk_prid_1" deck="module_walker" count="3">
     <name>Příď chodce</name>
-    <subtitle>Estetická příď</subtitle>
-    <text>Přední konstrukční díl chodce; určeno pro vizuální sestavení a uchycení dalších modulů.</text>
-    <module era="1" category="sklad" capacity="2" position="prid" />
+    <subtitle>Přední konstrukční díl chodce</subtitle>
+    <text></text>
+    <module era="1" category="sklad" capacity="2" position="prid" image="assets/modules/walker_wood_bow.png"/>
   </card>
 
   <!-- AIRSHIPS -->
   <card id="mod_air_sail_1" deck="module_airship" count="3">
     <name>Boční plachty</name>
     <subtitle>Malé plachty po stranách</subtitle>
-    <text>Základní pohon pro vzduchoplavce.</text>
-    <module era="1" category="pohon" power="4" weight="0" capacity="0" />
+    <text></text>
+    <module era="1" category="pohon" power="4" weight="0" capacity="0" image="assets/modules/airship_wood_mid.png"/>
   </card>
 
   <card id="mod_air_storage_1" deck="module_airship" count="4">
     <name>Lehká gondola</name>
-    <text>Otevřená konstrukce z dřevěných trámů a plátna.</text>
-    <module era="1" category="sklad" power="0" weight="1" capacity="2" />
+    <subtitle>Otevřená konstrukce z dřevěných trámů a plátna.</subtitle>
+    <text></text>
+    <module era="1" category="sklad" power="0" weight="1" capacity="2" image="assets/modules/airship_wood_mid.png"/>
   </card>
 
   <card id="mod_air_prid_1" deck="module_airship" count="3">
     <name>Příď vzduchoplavce</name>
-    <subtitle>Estetická příď</subtitle>
-    <text>Přední část gondoly; stavební a estetický prvek bez přímých efektů na statistiky.</text>
-    <module era="1" category="sklad" capacity="2" position="prid" />
+    <subtitle>Přední část gondoly</subtitle>
+    <text></text>
+    <module era="1" category="sklad" capacity="2" position="prid" image="assets/modules/airship_wood_bow.png"/>
   </card>
 
   <card id="mod_air_zad_1" deck="module_airship" count="3">
     <name>Zád vzduchoplavce</name>
-    <subtitle>Estetická záď</subtitle>
-    <text>Zadní část gondoly; strukturální prvek pro sestavení bez vlastních bonusů.</text>
-    <module era="1" category="sklad" capacity="2" position="zad" />
+    <subtitle>Zadní část gondoly</subtitle>
+    <text></text>
+    <module era="1" category="sklad" capacity="2" position="zad" image="assets/modules/airship_wood_stern.png"/>
+  </card>
+
+  <card id="mod_air_wpn_1" deck="module_airship" count="2">
+    <name>Shozové sudy</name>
+    <subtitle>Sudy naplněné hořlavinou shazované z výšky</subtitle>
+    <text></text>
+    <module era="1" category="zbran" power="0" weight="2" capacity="0" damage="1" image="assets/modules/airship_wood_mid.png"/>
+  </card>
+
+  <card id="mod_air_arm_1" deck="module_airship" count="2">
+    <name>Hustá plachtovina</name>
+    <subtitle>Základní ochrana balónu proti šípům a drobným projektilům.</subtitle>
+    <text></text>
+    <module era="1" category="obrana" power="0" weight="1" capacity="0" armor="1" image="assets/modules/airship_wood_mid.png"/>
   </card>
 
   <!-- ========================================== -->
@@ -97,29 +128,44 @@
 
   <card id="mod_ship_prid_2" deck="module_ship" count="3">
     <name>Příď lodě</name>
-    <subtitle>Estetická příď</subtitle>
-    <text>Příď dřevěné lodě.</text>
+    <subtitle>Příď lodě</subtitle>
+    <text></text>
     <module era="2" category="sklad" capacity="3" position="prid" image="assets/modules/ship_iron_bow.png"/>
   </card>
 
   <card id="mod_ship_zad_2" deck="module_ship" count="3">
     <name>Zádě loďě</name>
-    <subtitle>Estetická záď</subtitle>
-    <text>Záď dřevěné loďě.</text>
+    <subtitle>Záď lodě</subtitle>
+    <text></text>
     <module era="2" category="pohon" power="4" position="zad" image="assets/modules/ship_iron_stern_v2.png"/>
   </card>
 
   <card id="mod_ship_engine_2" deck="module_ship" count="2">
     <name>Parní koleso</name>
-    <subtitle>Průmyslový tah</subtitle>
-    <text>Masivní výkon, který bez problémů utáhne i těžké železné trupy.</text>
-    <module era="2" category="pohon" power="6" weight="3" capacity="0" image="assets/modules/ship_iron_mid.png"/>
+    <subtitle>Masivní výkon, který bez problémů utáhne i těžké železné trupy.</subtitle>
+    <text></text>
+    <module era="2" category="pohon" power="6" weight="0" capacity="0" image="assets/modules/ship_iron_mid.png"/>
   </card>
 
   <card id="mod_ship_iron_storage_2" deck="module_ship" count="2">
     <name>Železný kontejner</name>
-    <text>Těžká ocelová klec. Prostorná, ale rapidně zpomalí loď.</text>
-    <module era="2" category="sklad" power="0" weight="3" capacity="4" image="assets/modules/ship_iron_mid.png"/>
+    <subtitle>Prostorný, ale těžký.</subtitle>
+    <text></text>
+    <module era="2" category="sklad" power="0" weight="4" capacity="4" image="assets/modules/ship_iron_mid.png"/>
+  </card>
+
+  <card id="mod_ship_wpn_2" deck="module_ship" count="2">
+    <name>Dělová věž</name>
+    <subtitle>Masivní litinové dělo.</subtitle>
+    <text></text>
+    <module era="2" category="zbran" power="0" weight="3" capacity="0" damage="2" image="assets/modules/ship_iron_mid.png"/>
+  </card>
+
+  <card id="mod_ship_arm_2" deck="module_ship" count="2">
+    <name>Nýtované pláty</name>
+    <subtitle>Silné železné pláty chránící trup proti přímé dělostřelbě.</subtitle>
+    <text></text>
+    <module era="2" category="obrana" power="0" weight="3" capacity="0" armor="2" image="assets/modules/ship_iron_mid.png"/>
   </card>
 
   <!-- WALKERS -->
@@ -127,104 +173,47 @@
     <name>Parní písty</name>
     <subtitle>Mechanický krok</subtitle>
     <text>Hlasitý, kouřící mechanismus, který pohybuje s nohama.</text>
-    <module era="2" category="pohon" power="5" weight="2" capacity="0" />
+    <module era="2" category="pohon" power="2" weight="0" capacity="0" image="assets/modules/walker_wood_legs.png"/>
+  </card>
+
+  <card id="mod_walk_engine_2" deck="module_walker" count="2">
+    <name>Kloubová transmise</name>
+    <subtitle>Mechanický krok</subtitle>
+    <text>Dřevo, tyče a kožené popruhy.</text>
+    <module era="2" category="pohon" power="2" weight="0" capacity="0" image="assets/modules/walker_wood_legs.png"/>
+  </card>
+
+  <card id="mod_walk_wpn_2" deck="module_walker" count="2">
+    <name>Vrhací balista</name>
+    <subtitle>Mechanický nátah poskytuje slušný dostřel.</subtitle>
+    <text></text>
+    <module era="2" category="zbran" power="0" weight="1" capacity="0" damage="2" image="assets/modules/walker_wood_mid.png"/>
+  </card>
+
+  <card id="mod_walk_arm_2" deck="module_walker" count="2">
+    <name>Vrstvená kůže</name>
+    <subtitle>Pohlcuje nárazy a poskytuje základní ochranu kloubů stroje.</subtitle>
+    <text></text>
+    <module era="2" category="obrana" power="0" weight="1" capacity="0" armor="1" image="assets/modules/walker_wood_mid.png"/>
   </card>
 
   <!-- AIRSHIPS -->
   <card id="mod_air_engine_2" deck="module_airship" count="2">
     <name>Parní motor</name>
-    <subtitle>Efektivní pohon</subtitle>
-    <text>Nespoléhej se jen na příznivý vítr!</text>
-    <module era="2" category="pohon" power="8" weight="2" capacity="0" />
+    <subtitle>Nespoléhej se jen na příznivý vítr!</subtitle>
+    <text></text>
+    <module era="2" category="pohon" power="8" weight="0" capacity="0" image="assets/modules/airship_wood_mid.png"/>
   </card>
 
   <card id="mod_air_storage_2" deck="module_airship" count="3">
     <name>Zesílená gondola</name>
-    <text>Rozšířený nákladový prostor z nýtovaného hliníku.</text>
-    <module era="2" category="sklad" power="0" weight="2" capacity="3" />
+    <subtitle>Rozšířený nákladový prostor z nýtovaného hliníku.</subtitle>
+    <text></text>
+    <module era="2" category="sklad" power="0" weight="2" capacity="3" image="assets/modules/airship_wood_mid.png"/>
   </card>
-
-  <card id="mod_ship_wpn_1" deck="module_ship" count="2">
-    <name>Lanový harpunomet</name>
-    <subtitle>Základní výzbroj</subtitle>
-    <text>Těžká harpuna pro poškození cizích strojů.</text>
-    <module era="1" category="zbran" power="0" weight="1" capacity="0" />
-  </card>
-
-  <card id="mod_ship_arm_1" deck="module_ship" count="2">
-    <name>Zpevněné fošny</name>
-    <text>Zdvojená vrstva dřeva na bocích lodi.</text>
-    <module era="1" category="obrana" power="0" weight="1" capacity="0" />
-  </card>
-
-  <card id="mod_walk_wpn_1" deck="module_walker" count="2">
-    <name>Vrhací balista</name>
-    <subtitle>Obléhací zbraň</subtitle>
-    <text>Mechanický nátah poskytuje slušný dostřel.</text>
-    <module era="1" category="zbran" power="0" weight="1" capacity="0" />
-  </card>
-
-  <card id="mod_walk_arm_1" deck="module_walker" count="2">
-    <name>Vrstvená kůže</name>
-    <text>Pohlcuje nárazy a poskytuje základní ochranu kloubů stroje.</text>
-    <module era="1" category="obrana" power="0" weight="0" capacity="0" />
-  </card>
-
-  <card id="mod_air_wpn_1" deck="module_airship" count="2">
-    <name>Shozové sudy</name>
-    <subtitle>Gravitační útok</subtitle>
-    <text>Sudy naplněné hořlavinou shazované z výšky na cíl pod gondolou.</text>
-    <module era="1" category="zbran" power="0" weight="1" capacity="0" />
-  </card>
-
-  <card id="mod_air_arm_1" deck="module_airship" count="2">
-    <name>Hustá plachtovina</name>
-    <text>Základní ochrana balónu proti šípům a drobným projektilům.</text>
-    <module era="1" category="obrana" power="0" weight="0" capacity="0" />
-  </card>
-
-  <card id="mod_ship_wpn_2" deck="module_ship" count="2">
-    <name>Dělová věž</name>
-    <subtitle>Těžká artilerie</subtitle>
-    <text>Masivní litinové dělo. Drtivá síla, ale obrovská zátěž pro loď.</text>
-    <module era="2" category="zbran" power="0" weight="3" capacity="0" />
-  </card>
-
-  <card id="mod_ship_arm_2" deck="module_ship" count="2">
-    <name>Nýtované pláty</name>
-    <text>Silné železné pláty chránící trup proti přímé dělostřelbě.</text>
-    <module era="2" category="obrana" power="0" weight="3" capacity="0" />
-  </card>
-
-  <card id="mod_walk_wpn" deck="module_walker" count="2">
-    <name>Parní dělo</name>
-    <subtitle>Kinetická zbraň</subtitle>
-    <text>Využívá přetlak z kotlů k vystřelení ocelových projektilů.</text>
-    <module era="3" category="zbran" power="0" weight="2" capacity="0" />
-  </card>
-
-  <card id="mod_walk_arm" deck="module_walker" count="2">
-    <name>Ocelové štíty</name>
-    <text>Sklápěcí štíty chránící citlivé mechanismy a nohy chodce.</text>
-    <module era="3" category="obrana" power="0" weight="2" capacity="0" />
-  </card>
-
-  <card id="mod_air_wpn" deck="module_airship" count="2">
-    <name>Rotační kulomet</name>
-    <subtitle>Rychlopalná zbraň</subtitle>
-    <text>Extrémní rychlost palby kompenzuje menší ráži projektilů.</text>
-    <module era="3" category="zbran" power="0" weight="1" capacity="0" />
-  </card>
-
-  <card id="mod_air_arm" deck="module_airship" count="2">
-    <name>Kevlarová síť</name>
-    <text>Lehká kovová vlákna vetkaná do pláště. Skvělá ochrana při minimální váze.</text>
-    <module era="3" category="obrana" power="0" weight="1" capacity="0" />
-  </card>
-
 
   <!-- ========================================== -->
-  <!-- ERA 2: Steam and Iron (High power, massive weight) -->
+  <!-- ERA 3: Steam and Iron (High power, massive weight) -->
   <!-- ========================================== -->
 
   <!-- SHIPS -->    
@@ -232,7 +221,7 @@
     <name>Příď lodě</name>
     <subtitle>Rychlá příď</subtitle>
     <text>Příď ocelové lodě.</text>
-    <module era="3" category="sklad" capacity="4" position="prid" image="assets/modules/ship_steel_bow.png"/>
+    <module era="3" category="sklad" weight="2" capacity="4" position="prid" image="assets/modules/ship_steel_bow.png"/>
   </card>
 
   <card id="mod_ship_steel_storage_3" deck="module_ship" count="2">
@@ -241,11 +230,43 @@
     <module era="3" category="sklad" power="0" weight="3" capacity="6" image="assets/modules/ship_steel_mid.png"/>
   </card>
 
-  <card id="mod_ship_zad_3" deck="module_ship" count="2">
+  <card id="ship_zad_3" deck="module_ship" count="2">
     <name>Záď loďě</name>
     <subtitle>Silná záď</subtitle>
     <text>Záď ocelové loďě.</text>
     <module era="3" category="pohon" power="5" position="zad" image="assets/modules/ship_steel_stern.png"/>
+  </card>
+
+  <card id="ship_arm" deck="module_ship" count="2">
+    <name>Vodotěsné přepážky</name>
+    <text>Extrémně zvyšují životy lodi, ale přidávají zátěž.</text>
+    <module era="3" category="obrana" power="0" weight="2" capacity="0" armor="2" image="assets/modules/ship_steel_mid.png"/>
+  </card>
+
+  <card id="mod_walk_wpn" deck="module_walker" count="2">
+    <name>Parní dělo</name>
+    <subtitle>Kinetická zbraň</subtitle>
+    <text>Využívá přetlak z kotlů k vystřelení ocelových projektilů.</text>
+    <module era="3" category="zbran" power="0" weight="2" capacity="0" damage="3" image="assets/modules/walker_steel_mid.png"/>
+  </card>
+
+  <card id="mod_walk_arm" deck="module_walker" count="2">
+    <name>Ocelové štíty</name>
+    <text>Sklápěcí štíty chránící citlivé mechanismy a nohy chodce.</text>
+    <module era="3" category="obrana" power="0" weight="2" capacity="0" armor="2" image="assets/modules/walker_steel_mid.png"/>
+  </card>
+
+  <card id="mod_air_wpn" deck="module_airship" count="2">
+    <name>Rotační kulomet</name>
+    <subtitle>Rychlopalná zbraň</subtitle>
+    <text>Extrémní rychlost palby kompenzuje menší ráži projektilů.</text>
+    <module era="3" category="zbran" power="0" weight="1" capacity="0" damage="2" image="assets/modules/airship_steel_mid.png"/>
+  </card>
+
+  <card id="mod_air_arm" deck="module_airship" count="2">
+    <name>Kevlarová síť</name>
+    <text>Lehká kovová vlákna vetkaná do pláště. Skvělá ochrana při minimální váze.</text>
+    <module era="3" category="obrana" power="0" weight="1" capacity="0" armor="1" image="assets/modules/airship_steel_mid.png"/>
   </card>
 
 

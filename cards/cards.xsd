@@ -89,6 +89,8 @@
     <xs:attribute name="power" type="xs:integer" default="0" />
     <xs:attribute name="weight" type="xs:integer" default="0" />
     <xs:attribute name="capacity" type="xs:integer" default="0" />
+    <xs:attribute name="armor" type="xs:integer" default="0" />
+    <xs:attribute name="damage" type="xs:integer" default="0" />
     <xs:attribute name="position" type="ModulePosition" use="optional" default="trup" />
     <xs:attribute name="image" type="xs:string" use="optional" />
   </xs:complexType>
