@@ -16,6 +16,9 @@
     - [Prompty pro generování článků (Pohled shora)](#prompty-pro-generování-článků-pohled-shora)
     - [ÉRA I: Klasická dřevěná plachetnice](#éra-i-klasická-dřevěná-plachetnice)
     - [ÉRA II: Přechodový železo-dřevěný parník](#éra-ii-přechodový-železo-dřevěný-parník)
+    - [ÉRA I: Plátěné a dřevěné vzducholodě (Raná aeronautika)](#éra-i-plátěné-a-dřevěné-vzducholodě-raná-aeronautika)
+    - [ÉRA II: Přechodové hybridní křižníky (Železná kostra a plyn)](#éra-ii-přechodové-hybridní-křižníky-železná-kostra-a-plyn)
+    - [ÉRA III: Těžké ocelové dreadnoughty nebes (Pancéřované pevnosti)](#éra-iii-těžké-ocelové-dreadnoughty-nebes-pancéřované-pevnosti)
 
 ## cover art
 
@@ -164,3 +167,56 @@ Top down view of a dirty canvas sail stretched over an iron frame in a steampunk
 **Záď (Tlačný parní modul)**
 
 > Top down view of an early steampunk ship stern on a vertical portrait board game card. The ship is oriented horizontally from left to right. A flat wooden deck is surrounded by a thick riveted iron hull. This structure forms only a horizontal band in the center of the image. The left edge of the deck is a perfectly straight vertical cut of wood and iron for seamless tiling. Dark blue ocean waves are clearly visible at the top and bottom framing the central ship band. The right side features a copper steam exhaust and early spinning brass propellers leaving a white water trail in the ocean. Highly detailed industrial art, no text.
+
+### ÉRA I: Plátěné a dřevěné vzducholodě (Raná aeronautika)
+
+**Příď (Startovací modul)**
+
+> Side view of a wooden steampunk airship bow on a vertical portrait board game card. The airship is oriented horizontally from left to right. The front of the airship points to the left, soaring through white clouds and blue sky. The clouds occupy the top and bottom of the image. The right edge of the airship hull is a perfectly straight vertical cut of wood and canvas for seamless tiling. Late 18th century aviation design, brass details, ropes, highly detailed art, no text.
+
+**Trup (Středový nákladový prostor)**
+
+> Side view of a middle section of a wooden steampunk airship on a vertical portrait board game card. The airship is oriented horizontally from left to right. A flat wooden hull with canvas gas bags forms only a horizontal band in the center of the image running from the left edge to the right edge. White clouds and blue sky are clearly visible at the top and bottom framing the airship. Both left and right edges are perfectly straight vertical cuts for seamless tiling. Late 18th century aviation design, highly detailed art, no text.
+
+**Záď (Kormidelní a gondolový modul)**
+
+> Side view of a wooden steampunk airship stern on a vertical portrait board game card. The airship is oriented horizontally from left to right. The left edge of the hull is a perfectly straight vertical cut of wood and canvas for seamless tiling. The right side features a small wooden gondola and large canvas rudders leaving a faint vapor trail in the sky. White clouds surround the top and bottom framing the central airship band. Late 18th century aviation design, brass steering mechanisms, highly detailed art, no text.
+
+### ÉRA II: Přechodové hybridní křižníky (Železná kostra a plyn)
+
+**Trup (Středový modul)**
+
+> Side view of a middle section of a transitional steampunk airship on a vertical portrait board game card. The airship is oriented horizontally from left to right. A wooden structure is surrounded by a light riveted iron framework holding large reinforced fabric gas cells. This structure forms only a horizontal band in the center of the image running from the left edge to the right edge. Sky and soft clouds are clearly visible at the top and bottom framing the airship. Both left and right edges are perfectly straight vertical cuts of wood and iron for seamless tiling. Highly detailed industrial art, no text.
+
+**Záď (Pohonný parní modul)**
+
+> Side view of a transitional steampunk airship stern on a vertical portrait board game card. The airship is oriented horizontally from left to right. A wooden body is encased in a light iron hull with structural ribbing. This structure forms only a horizontal band in the center of the image. The left edge of the hull is a perfectly straight vertical cut of wood and iron for seamless tiling. Clouds and wind currents are visible at the top and bottom framing the central airship band. The right side features early brass propellers and small copper exhaust pipes releasing steam into the sky. Highly detailed industrial art, no text.
+
+### ÉRA III: Těžké ocelové dreadnoughty nebes (Pancéřované pevnosti)
+
+**Příď (Těžký prorážecí kloun)**
+
+> Side view of a heavy armored steampunk steel airship bow on a vertical portrait board game card. The airship is oriented horizontally from left to right. The front of the airship features a massive reinforced iron prow pointing to the left, cutting through dark storm clouds. The dramatic sky and vapor occupy the top and bottom of the image. The right edge of the airship hull is a perfectly straight vertical iron cut for seamless tiling. Peak industrial design, thick riveted steel armor plates, steam vents, highly detailed art, no text.
+
+**Trup (Masivní pancéřovaný sklad)**
+
+> Side view of a middle section of a heavy armored steampunk steel airship on a vertical portrait board game card. The airship is oriented horizontally from left to right. A flat hull made of thick riveted steel plates and heavy iron vents forms only a horizontal band in the center of the image running from the left edge to the right edge. Deep sky and dramatic clouds are clearly visible at the top and bottom framing the airship. Both left and right edges are perfectly straight vertical iron cuts for seamless tiling. Peak industrial design, massive pipe systems, highly detailed art, no text.
+
+**Záď (Turbínový superpohon)**
+
+> Side view of a heavy armored steampunk steel airship stern on a vertical portrait board game card. The airship is oriented horizontally from left to right. A flat hull made of thick riveted steel plates forms only a horizontal band in the center of the image. The left edge of the hull is a perfectly straight vertical iron cut for seamless tiling. Blue sky and dramatic clouds are clearly visible at the top and bottom framing the central airship band. The right side features massive spinning brass propellers, heavy iron rudders, and dark steam exhaust pouring into the sky. Peak industrial design, highly detailed art, no text.
+
+1. Horní karta (Větrný pohon / Ploutev – Éra I)
+Tato karta se umisťuje nejvýše. Spodní hrana jejího obrázku musí přesně navazovat na horní hranu páteře.
+
+Side view of a steampunk wooden air sail and dorsal fin for a board game card. The bottom edge of the artwork shows a clean horizontal wooden base of a sail mechanism. From this base, a canvas sail and a decorative wooden fin extend upwards into a blue sky with white clouds. The sky fills the upper part of the image. The entire asset is oriented horizontally from left to right and designed to tile seamlessly with adjacent cards. Late 18th century naval aesthetic, highly detailed art, no text.
+
+2. Střední karta (Páteř / Náklad – Éra I)
+Tato karta tvoří jádro článku. Je to ten čistý horizontální nosník, který drží kostičky surovin a spojuje celého chodce dohromady zleva doprava.
+
+Side view of a steampunk wooden spine and cargo segment for a board game card. A heavy mechanical wooden spine with open cargo grates runs horizontally across the center of the image from the left edge to the right edge. Both left and right edges are perfectly straight vertical cuts for seamless horizontal tiling. The top and bottom edges of the wooden beam are perfectly straight horizontal lines to allow vertical stacking with other components. Late 18th century industrial design, highly detailed art, no text.
+
+3. Spodní karta (Nohy / Šasi – Éra I)
+Tato karta se dává dospod. Horní hrana jejího obrázku se napojuje na spodní hranu páteře a nohy odtud směřují dolů k zemi.
+
+Side view of steampunk mechanical legs for a board game card. The top edge of the artwork shows a clean horizontal wooden and brass chassis connector. From this chassis, multiple multi-jointed wooden mechanical legs extend downwards, stepping on dry dirt ground. The ground and dust fill the bottom of the image. The legs and chassis are oriented horizontally from left to right and tile seamlessly with adjacent cards. Late 18th century design, highly detailed art, no text.
