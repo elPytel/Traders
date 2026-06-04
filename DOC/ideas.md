@@ -11,8 +11,6 @@
   - [Speciální periferie (Utility)](#speciální-periferie-utility)
 - [Začátek hry](#začátek-hry)
 - [Města](#města)
-  - [Upgrade měst](#upgrade-měst)
-  - [Názvy měst](#názvy-měst)
 - [Výměna mezi hráči](#výměna-mezi-hráči)
 
 Nejsou rozdělené balíčky vylepšení mezi jednotlivé stroje (lodě, vzducholodě, chodci), když si lížeš vylepšení, nikdy nevíš co dostaneš. Nuní hráče spolu obchodovat, nebo se naučit vyjít s tím co zrovna mají.
@@ -72,27 +70,9 @@ Pohon určuje kolik nákladu uveze jeden prostředek.
 
 Specifické moduly podle typu plavidla.
 
-1. Lodě (Dominance na vodě: Obrovská kapacita, hrubá síla, ale závislost na přístavech)
-Lodě mohou nést ten nejtěžší náklad a nejsilnější pancíř, ale potřebují masivní tah, jsou většinou pomalé. Velká hmostnost strje v poměru s nákladem.
-
-Parní koleso (Pohon): Vysoký výkon, ale velká zátěž. Ideální pro těžkotonážní transporty rudy.
-
-Hluboký trup (Sklad): Pojme nejvíce kostiček ze všech typů, ale zásadně snižuje rychlost lodi.
-
-1. Vzducholodě (Dominance ve vzduchu: Rychlost a flexibilita, ale křehkost a malá kapacita)
-Jsou lehké v poměru ku nákladu, ale mají malý nákladní prostor. 
-
-Přetlakový hořák (Pohon): Dává obrovskou rychlost, ale při poškození hrozí výbuch (křehké).
-
-Zesílený plynový vak (Obrana/Sklad): Dává nulovou zátěž, ale unese jen málo kostiček.
-
-1. Chodci / Strandbeests (Dominance na souši: Průchodnost terénem, modularita)
-
-Mají rychlý přsun na kontinentu, ale hluboká voda a hory je pro neprůchodná.
-
-Prachové filtry (Obrana): Zabraňují poškození strojů během událostí typu "Písečná bouře" a snižují opotřebení.
-
-Závěsné sítě (Sklad): Lehké, ale nechrání náklad při boji (snadný cíl pro piráty).
+Záď pohon,
+Příd nákladový prostor,
+Kajuta pro kapitána první středový díl.
 
 ## Epocha I (Dřevo a plachty)
 
@@ -156,40 +136,10 @@ Splněné úkoly 3 úrovně se naházejí do krabičky, ale nechávají se v odh
 
 # Města
 
-## Upgrade měst
-
-Khráč si tam dá svůj žeton po provedení vylepšení a stává se podílníkem na průmyslu. Takže když město vyprodukuje surovinu, hráč s žetonem dostane bonusovou surovinu navíc? Nebo výtezné body?
-
-## Názvy měst
-
-Z pohledu herního designu a pravděpodobnosti by bylo naprosto ideální mít na mapě přesně 10 měst. Dvě šestistěnné kostky generují součty 2 až 12 (celkem 11 možností). Pokud by 10 čísel bylo přiřazeno městům pro produkci, to statisticky nejčastější číslo – sedmička – by nespouštělo produkci, ale otočení nové karty z balíčku Událostí (např. pohyb pirátů, bouře nebo skoková změna trhu).
-
-- Londinium
-- Nýtov
-- Khar-Toba
-- Kovohrad
-- Kesselgrad
-- Kiruna
-- Járnborg
-- Thule
-- Eisenklamm
-- Alexandrie
-- Syracusae
-- Petra
-
-Místo na přiložení číselného žetonu s barvou a také symbolu suroviny, které se tuto hru bude objevovat v daném městě. 
-
-Větší množství surovin pomocí dvou různobarevných kostek. Modrá, červená. 1-6 a 1-6 tedy dvanáct možných měst, vždy dvě dostanou suroviny.
+Oddělení vnitrozemí a moře.
+Pomocí dvou různobarevných kostek se do hry emituje větší množství surovin. Modrá, červená. 1-6 a 1-6 tedy dvanáct možných měst, vždy dvě dostanou suroviny.
 
 Rozdělení na dvě barvy kostek (Modrá 1-6 a Červená 1-6) navíc nabízí  propojení s topologií mapy a vizuálem hry.
-
-Oddělení vnitrozemí a moře.
-
-12 měst 
-4x3 suroviny
-Zdroje suroviny představují kameny ve tvaru dané suroviny, jsou větší než dřevěné kostičky, které se používají pro náklad na strojích.
-
-Při součtu dvou kostek padá sedmička nejčastěji, zatímco dvojka a dvanáctka skoro vůbec. U tvého nového návrhu má každý uzel (město) naprosto stejnou šanci (1/6), že se v něm vygeneruje surovina. Hra díky tomu poběží neustále kupředu a hráči nebudou frustrováni tím, že jejich město už deset kol nic nevyprodukovalo.
 
 # Výměna mezi hráči
 

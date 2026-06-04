@@ -6,16 +6,17 @@
   - [Herní epochy](#herní-epochy)
   - [Dopravní prostředky](#dopravní-prostředky)
     - [Pilotní licence](#pilotní-licence)
-    - [Pohyb](#pohyb)
     - [Stavba a vylepšení](#stavba-a-vylepšení)
-      - [Chodec](#chodec)
-    - [Posádka](#posádka)
+      - [Lodě](#lodě)
+      - [Chodci / Strandbeests](#chodci--strandbeests)
+      - [Vzducholodě](#vzducholodě)
   - [Suroviny](#suroviny)
   - [Města](#města)
     - [Vylepšení měst](#vylepšení-měst)
-  - [Události a Trh (Events)](#události-a-trh-events)
+  - [Události](#události)
   - [Příprava hry](#příprava-hry)
   - [Tah Hráče](#tah-hráče)
+    - [Pohyb](#pohyb)
     - [Boj](#boj)
     - [Obchod mezi hráči](#obchod-mezi-hráči)
 
@@ -76,24 +77,10 @@ Masivní ocelové dreadnoughty. Extrémně drahé moduly s obrovským výkonem, 
 
 Z karet skládáte své stroje na přepravu. Díky tomu mají větší kampacitu rychlost a jiné bonusy.
 
-Lodě mohou putovat jen po vodě (moře, řeky).
-
-Chodci jen po pevnině a s krze brody úžiny.
-- musejí se vyhnout horám a jezerům.
-
-Vzducholodě mohou cestovat kdekoliv.
-
-
-Každý dopravní prostředek začíná s přídí, zádí a jednou kajutou pro kapitána. 
-
-Záď pohon,
-Příd nákladový prostor,
-Kajuta pro kapitána první středový díl.
-
-Hráči mohou mít strojů kolik mají kapitánů. 
-
 ### Pilotní licence
 Reprezentují stroj, jeho životy a rychlost.
+
+Hráč začíná s jedním kapitánem (jeden stroj). Pokud si ve městě najme dalšího, může začít stavět druhý stroj a operovat na dvou místech mapy zároveň.
 
 ![Pilotní licence](../assets/pilot_licence.png)
 
@@ -102,17 +89,6 @@ Dvouvrstvý karton s výřezy pro dřevěné kostičky nebo kolíčky. Vzhledem 
 Na této desce (licenci) můžeš trackovat:
 - Aktuální rychlost: Posouváš kolíček, když přidáš motor nebo zátěž.
 - Životy / Integritu: Ukazuje, kolik zásahů stroj vydrží.
-
-### Pohyb
-
-Každý modul (nákladový prostor, dělo, extra pancíř) bude mít kromě své funkce i atribut zátěž. Motory budou mít naopak atribut výkon.
-
-Rychlost stroje: 
-
-$\text{Rychlost} = \text{Celkový výkon} - \text{Celková zátěž}$
-
-> Cílená mechanika:
-> Hráč, který si postaví obří nákladní vlak plný děl, bude potřebovat masivní parní kotle, aby se vůbec pohnul o jeden hex. Naproti tomu kurýr na lehké vzducholodi s jedním motorem a malým skladem proletí mapu za dvě kola.
 
 ### Stavba a vylepšení
 
@@ -133,7 +109,20 @@ Mají:
 - hmotnost,
 - bonusy
 
-#### Chodec
+#### Lodě
+Lodě mohou putovat jen po vodě (moře, řeky).
+
+Dominance na vodě: Obrovská kapacita, hrubá síla, ale závislost na přístavech.
+Lodě mohou nést ten nejtěžší náklad a nejsilnější pancíř, ale potřebují masivní tah, jsou většinou pomalé. Velká hmostnost stroje v poměru s nákladem.
+
+#### Chodci / Strandbeests
+
+Dominance na souši
+
+Mají rychlý přesun na kontinentu, ale hluboká voda a hory je pro ně neprůchodná.
+
+Chodí jen po pevnině a skrze brody a úžiny.
+Musejí se vyhnout horám a jezerům.
 
 Anatomie jednoho článku chodce
 Horní vrstva (Větrný pohon / Senzory): Kouká zpod horního okraje páteře. Tematicky jde o plachty, lapače větru nebo radary. Dodávají stroji rychlost nebo utility vlastnosti.
@@ -142,15 +131,14 @@ Střední vrstva (Páteř / Náklad): Plně viditelná karta. Leží na ní dře
 
 Spodní vrstva (Nohy / Šasi): Kouká zpod spodního okraje páteře. Jde o masivní mechanické nohy nebo pásy, které definují hrubý výkon pro nesení zátěže a případnou imunitu vůči pouštnímu terénu.
 
-### Posádka
+#### Vzducholodě
+Vzducholodě mohou cestovat kdekoliv.
+Dominance ve vzduchu: Rychlost a flexibilita, ale křehkost a malá kapacita
+Jsou lehké v poměru ku nákladu, ale mají malý nákladní prostor. 
 
-Hráč začíná s jedním kapitánem (jeden stroj). Pokud si ve městě najme dalšího, může začít stavět druhý stroj a operovat na dvou místech mapy zároveň.
+Každý dopravní prostředek začíná s přídí, zádí a jednou kajutou pro kapitána. 
 
-Členové posádky:
-- mechanik (bonus k opravám),
-- navigátor (bonus k pohybu),
-- obchodník (bonus k obchodování),
-- voják (bonus k boji).
+Hráči mohou mít strojů kolik mají kapitánů. 
 
 ## Suroviny
 
@@ -178,6 +166,25 @@ Suroviny je možné nakládat a vykládat z dopravního přostředku, který sto
 
 ## Města
 
+Na mapě je 12 měst, které produkují 3x4-typy surovin.
+Zdroje suroviny představují kameny ve tvaru dané suroviny, jsou větší než dřevěné kostičky, které se používají pro náklad na strojích.
+
+Názvy měst:
+- Londinium
+- Nýtov
+- Khar-Toba
+- Kovohrad
+- Kesselgrad
+- Kiruna
+- Járnborg
+- Thule
+- Eisenklamm
+- Alexandrie
+- Syracusae
+- Petra
+
+Na mapě je u každého města místo na přiložení číselného žetonu s barvou a také symbolu suroviny, které se tuto hru bude objevovat v daném městě. 
+
 ### Vylepšení měst
 
 Infrastrukturní úkoly v praxi
@@ -195,7 +202,7 @@ Rozšíření produkce
 Rozšíření pravděpodobnosti (Častější spouštění). Pokud má město na začátku přidělené spouštěcí číslo 5, upgrade mu přidá i číslo 6. Tím se drasticky zvyšuje šance, že město vyprodukuje suroviny, protože ho aktivuje více výsledků hodu.
 Vylosování druhého číselného žetonu, který se umístí vedle toho původního. Když padne číslo na kterémkoliv z těchto žetonů, město vyprodukuje suroviny. 
 
-## Události a Trh (Events)
+## Události 
 
 
 - Epocha I (Zahájení): Nízké odměny, které slouží primárně k zisku startovního kapitálu pro nákup prvních lepších modulů (silnější motor, větší sklad).
@@ -251,6 +258,17 @@ Alternativa - Přestavba: Místo pohybu a akcí může hráč stroj odstavit v l
 Fáze údržby (Status): Odstranění stavu "V opravě" z vlastních strojů, které byly v minulém kole zničeny v boji.
 
 Fáze trhu: Pokud byly v tomto tahu splněny nějaké úkoly z nástěnky, doplní se nové z aktuálního balíčku Epochy III do plného počtu (hráči + 2).
+
+### Pohyb
+
+Každý modul (nákladový prostor, dělo, extra pancíř) má kromě své funkce i atribut zátěž. Motory budou mít naopak atribut výkon.
+
+Rychlost stroje: 
+
+$\text{Rychlost} = \text{Celkový výkon} - \text{Celková zátěž}$
+
+> Cílená mechanika:
+> Hráč, který si postaví obří nákladní vlak plný děl, bude potřebovat masivní parní kotle, aby se vůbec pohnul o jeden hex. Naproti tomu kurýr na lehké vzducholodi s jedním motorem a malým skladem proletí mapu za dvě kola.
 
 ### Boj
 

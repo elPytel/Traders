@@ -15,7 +15,9 @@ Jak bude řešena měna?
 
 Omezení velikosti prostředků?
 
+Mají kapytání nějaké vlastnosti? Mohlo by místo kapytánů a pilottních licencí být jen jedna společná karta?
+Použitý kapitán určuje maximální životy a náklad lodi.
+
 ## DLC
 
-Piráti a zloději
-Pohyb NPC: Pokud událost spawne na mapě pirátskou loď, kostky určují její pohyb (např. 1-2 na sever, 3-4 na jih).
+[DLC](./DOC/DLC.md)

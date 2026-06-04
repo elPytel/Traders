@@ -197,6 +197,13 @@
     <module era="2" category="obrana" power="0" weight="1" capacity="0" armor="1" image="assets/modules/walker_wood_mid.png"/>
   </card>
 
+  <card id="mod_walk_arm_2" deck="module_walker" count="2">
+    <name>Zesílený textilní vak</name>
+    <subtitle></subtitle>
+    <text></text>
+    <module era="2" category="obrana" power="0" weight="1" capacity="1" armor="1" image="assets/modules/walker_wood_mid.png"/>
+  </card>
+
   <!-- AIRSHIPS -->
   <card id="mod_air_engine_2" deck="module_airship" count="2">
     <name>Parní motor</name>
@@ -205,7 +212,7 @@
     <module era="2" category="pohon" power="8" weight="0" capacity="0" image="assets/modules/airship_wood_mid.png"/>
   </card>
 
-  <card id="mod_air_storage_2" deck="module_airship" count="3">
+  <card id="mod_air_storage_2" deck="module_airship" count="2">
     <name>Zesílená gondola</name>
     <subtitle>Rozšířený nákladový prostor z nýtovaného hliníku.</subtitle>
     <text></text>
@@ -230,6 +237,12 @@
     <module era="3" category="sklad" power="0" weight="3" capacity="6" image="assets/modules/ship_steel_mid.png"/>
   </card>
 
+  <card id="mod_ship_steel_storage_3" deck="module_ship" count="2">
+    <name>Hluboký trup</name>
+    <text>Ohromný, ale zásadně snižuje rychlost lodi.</text>
+    <module era="3" category="sklad" power="0" weight="3" capacity="6" image="assets/modules/ship_steel_mid.png"/>
+  </card>
+
   <card id="ship_zad_3" deck="module_ship" count="2">
     <name>Záď loďě</name>
     <subtitle>Silná záď</subtitle>
@@ -243,6 +256,7 @@
     <module era="3" category="obrana" power="0" weight="2" capacity="0" armor="2" image="assets/modules/ship_steel_mid.png"/>
   </card>
 
+  <!-- WALKERS -->
   <card id="mod_walk_wpn" deck="module_walker" count="2">
     <name>Parní dělo</name>
     <subtitle>Kinetická zbraň</subtitle>
@@ -254,6 +268,14 @@
     <name>Ocelové štíty</name>
     <text>Sklápěcí štíty chránící citlivé mechanismy a nohy chodce.</text>
     <module era="3" category="obrana" power="0" weight="2" capacity="0" armor="2" image="assets/modules/walker_steel_mid.png"/>
+  </card>
+
+  <!-- AIRSHIPS -->
+  <card id="mod_air_engine_3" deck="module_airship" count="2">
+    <name>Přetlakový hořák</name>
+    <subtitle>Dává obrovskou rychlost</subtitle>
+    <text></text>
+    <module era="3" category="pohon" power="4" image="assets/modules/airship_wood_mid.png"/>
   </card>
 
   <card id="mod_air_wpn" deck="module_airship" count="2">
