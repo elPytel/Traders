@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cards game="Obchodnici" version="1.0">
 
+  <!-- ========================================== -->
+  <!-- ERA 1: Wood and Canvas (Low weight, low power) -->
+  <!-- ========================================== -->
+
   <card id="quest_1_alexandrie_food" deck="quest" count="1">
     <name>Hladový přístav</name>
     <subtitle>Běžná zakázka</subtitle>
-    <text>Dělníci v docích odmítají pracovat o hladu. Nutně potřebují zásoby.</text>
-    <quest era="1" city="Alexandrie" wants="[ 🟨 🟨 ]" reward="8" is_upgrade="false"
+    <text>Dělníci v docích odmítají pracovat o hladu.</text>
+    <quest era="1" city="Alexandrie" wants="[ 🟨 🟨 ]" reward="8" is_upgrade="false" reward_module_era="2"
       image="assets/goals/alexandrie_food.png" />
   </card>
 
@@ -23,6 +27,38 @@
     <quest era="1" city="Kiruna" wants="[ ⬛ ⬛ ]" reward="12" is_upgrade="false" />
   </card>
 
+  <card id="quest_1_syracusae_food" deck="quest" count="1">
+    <name>Jižní trhy</name>
+    <subtitle>Běžná zakázka</subtitle>
+    <text>Místní tržnice zejí prázdnotou. Město na pobřeží nutně poptává dodávky obilí.</text>
+    <quest era="1" city="Syracusae" wants="[ 🟨 🟨 ]" reward="9" is_upgrade="false" />
+  </card>
+
+  <card id="quest_1_thule_coal" deck="quest" count="1">
+    <name>Polární základna</name>
+    <subtitle>Běžná zakázka</subtitle>
+    <text>Výzkumná stanice na okraji věčného ledu potřebuje palivo pro parní generátory.</text>
+    <quest era="1" city="Thule" wants="[ ⬛ ⬛ ]" reward="12" is_upgrade="false" />
+  </card>
+
+  <card id="quest_1_jarnborg_food" deck="quest" count="1">
+    <name>Hladový fjord</name>
+    <subtitle>Běžná zakázka</subtitle>
+    <text>Kamenitá půda na severu nikoho neuživí. Těžaři v loděnicích poptávají jídlo.</text>
+    <quest era="1" city="Járnborg" wants="[ 🟨 🟨 ]" reward="10" is_upgrade="false" />
+  </card>
+
+  <card id="quest_1_kesselgrad_ore" deck="quest" count="1">
+    <name>Pevnostní slévárny</name>
+    <subtitle>Běžná zakázka</subtitle>
+    <text>Kotlárny v parní pevnosti spotřebovaly veškeré zásoby rudy na nové písty.</text>
+    <quest era="1" city="Kesselgrad" wants="[ 🟥 🟥 ]" reward="11" is_upgrade="false" />
+  </card>
+
+
+  <!-- ========================================== -->
+  <!-- ERA 2: Steam and Iron (High power, massive weight) -->
+  <!-- ========================================== -->
 
   <card id="quest_2_eisenklamm_upgrade" deck="quest" count="1">
     <name>Parní rypadlo</name>
@@ -34,8 +70,8 @@
   <card id="quest_2_londonium_gears" deck="quest" count="1">
     <name>Nová montovna</name>
     <subtitle>Běžná zakázka</subtitle>
-    <text>Továrny rozšiřují výrobu a poptávají přesné strojní díly a uhlí pro generátory.</text>
-    <quest era="2" city="Londonium" wants="[ 🟦 ⬛ ⬛ ]" reward="18" is_upgrade="false" />
+    <text>Továrny rozšiřují výrobu a poptávají díly.</text>
+    <quest era="2" city="Londonium" wants="[ 🟦 ⬛ ⬛ ]" reward="18" is_upgrade="false" reward_module_era="1" />
   </card>
 
   <card id="quest_2_petra_food" deck="quest" count="1">
@@ -44,6 +80,74 @@
     <text>Hlubinné práce ve skalním městě se protahují. Dělníci vyžadují jídlo a nářadí.</text>
     <quest era="2" city="Petra" wants="[ 🟨 🟨 🟦 ]" reward="20" is_upgrade="false" />
   </card>
+
+  <card id="quest_2_alexandrie_armor" deck="quest" count="1">
+    <name>Pancéřování doků</name>
+    <subtitle>Běžná zakázka</subtitle>
+    <text>Zvýšený výskyt pirátů vyžaduje urychlené zpevnění pobřežních dělostřeleckých baterií.</text>
+    <quest era="2" city="Alexandrie" wants="[ 🟥 🟥 🟦 ]" reward="18" is_upgrade="false" />
+  </card>
+
+  <card id="quest_2_syracusae_upgrade" deck="quest" count="1">
+    <name>Parní překladiště</name>
+    <subtitle>Infrastrukturní projekt</subtitle>
+    <text>Vybuduj síť mechanických dopravníků v docích. Toto město od nynějška produkuje dvojnásobek.</text>
+    <quest era="2" city="Syracusae" wants="[ ⬛ ⬛ 🟦 ]" reward="16" is_upgrade="true" />
+  </card>
+
+  <card id="quest_2_nytov_furnace" deck="quest" count="1">
+    <name>Modernizace hutí</name>
+    <subtitle>Běžná zakázka</subtitle>
+    <text>Pro masovou výrobu ocelových plátů je potřeba kompletně přestavět vnitřní vyzdívku vysokých pecí.</text>
+    <quest era="2" city="Nýtov" wants="[ ⬛ ⬛ 🟥 ]" reward="15" is_upgrade="false" />
+  </card>
+
+  <card id="quest_2_jarnborg_upgrade" deck="quest" count="1">
+    <name>Pneumatické jeřáby</name>
+    <subtitle>Infrastrukturní projekt</subtitle>
+    <text>Nainstaluj těžké tlakové výložníky pro nakládku rudy. Toto město od nynějška produkuje dvojnásobek.</text>
+    <quest era="2" city="Járnborg" wants="[ 🟦 🟦 🟥 ]" reward="17" is_upgrade="true" />
+  </card>
+
+  <card id="quest_2_thule_expedition" deck="quest" count="1">
+    <name>Polární expedice</name>
+    <subtitle>Běžná zakázka</subtitle>
+    <text>Vědecký tým vyráží hlouběji do ledové pustiny a poptává trvanlivé potraviny a kvalitní otop.</text>
+    <quest era="2" city="Thule" wants="[ 🟨 🟨 ⬛ ]" reward="16" is_upgrade="false" />
+  </card>
+
+  <card id="quest_2_khartoba_caravan" deck="quest" count="1">
+    <name>Ochrana oázy</name>
+    <subtitle>Běžná zakázka</subtitle>
+    <text>Pouštní hlídky v dunách potřebují nutné dodávky proviantu a náhradních dílů pro své kráčející stroje.</text>
+    <quest era="2" city="Khar-Toba" wants="[ 🟨 🟨 🟦 ]" reward="17" is_upgrade="false" />
+  </card>
+
+  <card id="quest_2_kovohrad_labs" deck="quest" count="1">
+    <name>Výzkumné laboratoře</name>
+    <subtitle>Běžná zakázka</subtitle>
+    <text>Státní program pokročilé metalurgie urgentně poptává palivo a přesné měřící přístroje.</text>
+    <quest era="2" city="Kovohrad" wants="[ ⬛ 🟦 🟦 ]" reward="19" is_upgrade="false" />
+  </card>
+
+  <card id="quest_2_kiruna_upgrade" deck="quest" count="1">
+    <name>Odsávání plynů</name>
+    <subtitle>Infrastrukturní projekt</subtitle>
+    <text>Zaveď parní ventilaci do hlubinných šachet proti výbuchům. Toto město od nynějška produkuje dvojnásobek.</text>
+    <quest era="2" city="Kiruna" wants="[ 🟦 🟦 ⬛ ]" reward="18" is_upgrade="true" />
+  </card>
+
+  <card id="quest_2_kesselgrad_boilers" deck="quest" count="1">
+    <name>Tlakové kotlárny</name>
+    <subtitle>Běžná zakázka</subtitle>
+    <text>Vnitrozemská pevnost rozšiřuje své parní kapacity a poptává jakostní rudu a součástky.</text>
+    <quest era="2" city="Kesselgrad" wants="[ 🟥 🟥 🟦 ]" reward="20" is_upgrade="false" />
+  </card>
+
+
+  <!-- ========================================== -->
+  <!-- ERA 3: Steam and Iron (High power, massive weight) -->
+  <!-- ========================================== -->
 
 
   <card id="quest_3_kovohrad_upgrade" deck="quest" count="1">

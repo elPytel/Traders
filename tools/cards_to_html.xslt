@@ -256,10 +256,24 @@
             text-transform: uppercase;
           }
 
+          /* Reward module era badge placed on art, opposite upgrade badge */
+          .reward-module-badge {
+            position: absolute;
+            top: 2mm; left: 2mm;
+            background: rgba(47,55,64,0.9);
+            color: #f1f1f1;
+            font-weight: bold;
+            font-size: 4.5mm;
+            width: 10mm; height: 10mm;
+            display:flex; align-items:center; justify-content:center;
+            border-radius: 1mm;
+            border: 0.4mm solid rgba(255,255,255,0.12);
+            z-index: 9;
+          }
+
           /* Massive Reward badge */
           .reward-badge {
-            position: absolute;
-            bottom: 2mm; right: 2mm;
+            /* Reward container moved into a flex container */
             width: 14mm; height: 14mm;
             background: #111; color: #fbc02d;
             border-radius: 50%;
@@ -267,6 +281,14 @@
             font-size: 6mm; font-weight: bold; font-family: sans-serif;
             border: 0.5mm solid #fbc02d;
             box-shadow: 0 0 2mm rgba(0,0,0,0.5);
+          }
+
+          .reward-container { position: absolute; bottom: 2mm; right: 2mm; display:flex; gap:1mm; align-items:center; }
+          .module-icon {
+            width: 12mm; height: 12mm; box-sizing: border-box;
+            background: #2f3740; color: #fff; border-radius: 2mm;
+            display:flex; align-items:center; justify-content:center; font-weight:700; font-size:5mm;
+            border: 0.4mm solid rgba(255,255,255,0.12);
           }
 
           /* Back card full image */
@@ -484,6 +506,11 @@
             <div class="upgrade-badge">Upgrade</div>
           </xsl:if>
 
+          <!-- Show module-era icon for quest reward on the art, opposite upgrade badge -->
+          <xsl:if test="string-length(normalize-space($cardNode/quest/@reward_module_era)) &gt; 0">
+            <div class="reward-module-badge"><xsl:value-of select="$cardNode/quest/@reward_module_era"/></div>
+          </xsl:if>
+
           <xsl:if test="$cardNode/module and number($cardNode/module/@capacity) &gt; 0">
             <div class="cargo-area">
               <xsl:call-template name="generate-slots">
@@ -548,7 +575,9 @@
                   <div>Místo: <strong><xsl:value-of select="$cardNode/quest/@city"/></strong></div>
                   <div class="quest-req"><xsl:value-of select="$cardNode/quest/@wants"/></div>
                 </div>
-                <div class="reward-badge"><xsl:value-of select="$cardNode/quest/@reward"/></div>
+                <div class="reward-container">
+                  <div class="reward-badge"><xsl:value-of select="$cardNode/quest/@reward"/></div>
+                </div>
               </xsl:if>
             </xsl:otherwise>
           </xsl:choose>
