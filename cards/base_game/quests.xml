@@ -9,7 +9,7 @@
     <name>Hladový přístav</name>
     <subtitle>Běžná zakázka</subtitle>
     <text>Dělníci v docích odmítají pracovat o hladu.</text>
-    <quest era="1" city="Alexandrie" wants="[ 🟨 🟨 ]" reward="8" is_upgrade="false" reward_module_era="2"
+    <quest era="1" city="Alexandrie" wants="[ 🟨 🟨 ]" reward="0" reward_modules="2"
       image="assets/goals/alexandrie_food.png" />
   </card>
 
@@ -17,42 +17,42 @@
     <name>Rozpálení pecí</name>
     <subtitle>Běžná zakázka</subtitle>
     <text>Vysoké pece v Nýtově vyžadují surové železo pro první zkušební odlitky.</text>
-    <quest era="1" city="Nýtov" wants="[ 🟥 🟥 ]" reward="10" is_upgrade="false" />
+    <quest era="1" city="Nýtov" wants="[ 🟥 🟥 ]" reward="5" reward_modules="1"/>
   </card>
 
   <card id="quest_1_kiruna_coal" deck="quest" count="1">
     <name>Arktický mráz</name>
     <subtitle>Běžná zakázka</subtitle>
     <text>Zima udeřila nečekaně brzy. Doly hrozí zamrznutím, pokud nedovezeš palivo.</text>
-    <quest era="1" city="Kiruna" wants="[ ⬛ ⬛ ]" reward="12" is_upgrade="false" />
+    <quest era="1" city="Kiruna" wants="[ ⬛ ⬛ ]" reward="0" reward_modules="1 1"/>
   </card>
 
   <card id="quest_1_syracusae_food" deck="quest" count="1">
     <name>Jižní trhy</name>
     <subtitle>Běžná zakázka</subtitle>
     <text>Místní tržnice zejí prázdnotou. Město na pobřeží nutně poptává dodávky obilí.</text>
-    <quest era="1" city="Syracusae" wants="[ 🟨 🟨 ]" reward="9" is_upgrade="false" />
+    <quest era="1" city="Syracusae" wants="[ 🟨 🟨 ]" reward="10" />
   </card>
 
   <card id="quest_1_thule_coal" deck="quest" count="1">
     <name>Polární základna</name>
     <subtitle>Běžná zakázka</subtitle>
     <text>Výzkumná stanice na okraji věčného ledu potřebuje palivo pro parní generátory.</text>
-    <quest era="1" city="Thule" wants="[ ⬛ ⬛ ]" reward="12" is_upgrade="false" />
+    <quest era="1" city="Thule" wants="[ ⬛ ⬛ ]" reward="10" />
   </card>
 
   <card id="quest_1_jarnborg_food" deck="quest" count="1">
     <name>Hladový fjord</name>
     <subtitle>Běžná zakázka</subtitle>
     <text>Kamenitá půda na severu nikoho neuživí. Těžaři v loděnicích poptávají jídlo.</text>
-    <quest era="1" city="Járnborg" wants="[ 🟨 🟨 ]" reward="10" is_upgrade="false" />
+    <quest era="1" city="Járnborg" wants="[ 🟨 🟨 ]" reward="10" />
   </card>
 
   <card id="quest_1_kesselgrad_ore" deck="quest" count="1">
     <name>Pevnostní slévárny</name>
     <subtitle>Běžná zakázka</subtitle>
     <text>Kotlárny v parní pevnosti spotřebovaly veškeré zásoby rudy na nové písty.</text>
-    <quest era="1" city="Kesselgrad" wants="[ 🟥 🟥 ]" reward="11" is_upgrade="false" />
+    <quest era="1" city="Kesselgrad" wants="[ 🟥 🟥 ]" reward="10" />
   </card>
 
 
@@ -64,84 +64,84 @@
     <name>Parní rypadlo</name>
     <subtitle>Infrastrukturní projekt</subtitle>
     <text>Doruč těžkou techniku do průsmyku. Toto město od nynějška produkuje dvojnásobek.</text>
-    <quest era="2" city="Eisenklamm" wants="[ 🟦 🟦 ⬛ ]" reward="15" is_upgrade="true" />
+    <quest era="2" city="Eisenklamm" wants="[ 🟦 🟦 ⬛ ]" reward="5" upgrade_type="expansion" />
   </card>
 
   <card id="quest_2_londonium_gears" deck="quest" count="1">
     <name>Nová montovna</name>
     <subtitle>Běžná zakázka</subtitle>
     <text>Továrny rozšiřují výrobu a poptávají díly.</text>
-    <quest era="2" city="Londonium" wants="[ 🟦 ⬛ ⬛ ]" reward="18" is_upgrade="false" reward_module_era="1" />
+    <quest era="2" city="Londonium" wants="[ 🟦 ⬛ ⬛ ]" reward="10" reward_modules="1" />
   </card>
 
   <card id="quest_2_petra_food" deck="quest" count="1">
     <name>Zásoby pro kopáče</name>
     <subtitle>Běžná zakázka</subtitle>
     <text>Hlubinné práce ve skalním městě se protahují. Dělníci vyžadují jídlo a nářadí.</text>
-    <quest era="2" city="Petra" wants="[ 🟨 🟨 🟦 ]" reward="20" is_upgrade="false" />
+    <quest era="2" city="Petra" wants="[ 🟨 🟨 🟦 ]" reward="15" />
   </card>
 
   <card id="quest_2_alexandrie_armor" deck="quest" count="1">
     <name>Pancéřování doků</name>
     <subtitle>Běžná zakázka</subtitle>
     <text>Zvýšený výskyt pirátů vyžaduje urychlené zpevnění pobřežních dělostřeleckých baterií.</text>
-    <quest era="2" city="Alexandrie" wants="[ 🟥 🟥 🟦 ]" reward="18" is_upgrade="false" />
+    <quest era="2" city="Alexandrie" wants="[ 🟥 🟥 🟦 ]" reward="15" />
   </card>
 
   <card id="quest_2_syracusae_upgrade" deck="quest" count="1">
     <name>Parní překladiště</name>
     <subtitle>Infrastrukturní projekt</subtitle>
     <text>Vybuduj síť mechanických dopravníků v docích. Toto město od nynějška produkuje dvojnásobek.</text>
-    <quest era="2" city="Syracusae" wants="[ ⬛ ⬛ 🟦 ]" reward="16" is_upgrade="true" />
+    <quest era="2" city="Syracusae" wants="[ ⬛ ⬛ 🟦 ]" reward="5" upgrade_type="expansion" />
   </card>
 
   <card id="quest_2_nytov_furnace" deck="quest" count="1">
     <name>Modernizace hutí</name>
     <subtitle>Běžná zakázka</subtitle>
     <text>Pro masovou výrobu ocelových plátů je potřeba kompletně přestavět vnitřní vyzdívku vysokých pecí.</text>
-    <quest era="2" city="Nýtov" wants="[ ⬛ ⬛ 🟥 ]" reward="15" is_upgrade="false" />
+    <quest era="2" city="Nýtov" wants="[ ⬛ ⬛ 🟥 ]" reward="15" />
   </card>
 
   <card id="quest_2_jarnborg_upgrade" deck="quest" count="1">
     <name>Pneumatické jeřáby</name>
     <subtitle>Infrastrukturní projekt</subtitle>
     <text>Nainstaluj těžké tlakové výložníky pro nakládku rudy. Toto město od nynějška produkuje dvojnásobek.</text>
-    <quest era="2" city="Járnborg" wants="[ 🟦 🟦 🟥 ]" reward="17" is_upgrade="true" />
+    <quest era="2" city="Járnborg" wants="[ 🟦 🟦 🟥 ]" reward="15" upgrade_type="expansion" />
   </card>
 
   <card id="quest_2_thule_expedition" deck="quest" count="1">
     <name>Polární expedice</name>
     <subtitle>Běžná zakázka</subtitle>
     <text>Vědecký tým vyráží hlouběji do ledové pustiny a poptává trvanlivé potraviny a kvalitní otop.</text>
-    <quest era="2" city="Thule" wants="[ 🟨 🟨 ⬛ ]" reward="16" is_upgrade="false" />
+    <quest era="2" city="Thule" wants="[ 🟨 🟨 ⬛ ]" reward="15" />
   </card>
 
   <card id="quest_2_khartoba_caravan" deck="quest" count="1">
     <name>Ochrana oázy</name>
     <subtitle>Běžná zakázka</subtitle>
     <text>Pouštní hlídky v dunách potřebují nutné dodávky proviantu a náhradních dílů pro své kráčející stroje.</text>
-    <quest era="2" city="Khar-Toba" wants="[ 🟨 🟨 🟦 ]" reward="17" is_upgrade="false" />
+    <quest era="2" city="Khar-Toba" wants="[ 🟨 🟨 🟦 ]" reward="15" />
   </card>
 
   <card id="quest_2_kovohrad_labs" deck="quest" count="1">
     <name>Výzkumné laboratoře</name>
     <subtitle>Běžná zakázka</subtitle>
     <text>Státní program pokročilé metalurgie urgentně poptává palivo a přesné měřící přístroje.</text>
-    <quest era="2" city="Kovohrad" wants="[ ⬛ 🟦 🟦 ]" reward="19" is_upgrade="false" />
+    <quest era="2" city="Kovohrad" wants="[ ⬛ 🟦 🟦 ]" reward="15" />
   </card>
 
   <card id="quest_2_kiruna_upgrade" deck="quest" count="1">
     <name>Odsávání plynů</name>
     <subtitle>Infrastrukturní projekt</subtitle>
     <text>Zaveď parní ventilaci do hlubinných šachet proti výbuchům. Toto město od nynějška produkuje dvojnásobek.</text>
-    <quest era="2" city="Kiruna" wants="[ 🟦 🟦 ⬛ ]" reward="18" is_upgrade="true" />
+    <quest era="2" city="Kiruna" wants="[ 🟦 🟦 ⬛ ]" reward="10" upgrade_type="expansion" />
   </card>
 
   <card id="quest_2_kesselgrad_boilers" deck="quest" count="1">
     <name>Tlakové kotlárny</name>
     <subtitle>Běžná zakázka</subtitle>
     <text>Vnitrozemská pevnost rozšiřuje své parní kapacity a poptává jakostní rudu a součástky.</text>
-    <quest era="2" city="Kesselgrad" wants="[ 🟥 🟥 🟦 ]" reward="20" is_upgrade="false" />
+    <quest era="2" city="Kesselgrad" wants="[ 🟥 🟥 🟦 ]" reward="15" />
   </card>
 
 
@@ -154,21 +154,83 @@
     <name>Hlubinné vrty</name>
     <subtitle>Infrastrukturní projekt</subtitle>
     <text>Nainstaluj gigantická ocelová vrtná ústrojí. Toto město od nynějška produkuje dvojnásobek.</text>
-    <quest era="3" city="Kovohrad" wants="[ 🟦 🟦 🟦 ⬛ ]" reward="30" is_upgrade="true" />
+    <quest era="3" city="Kovohrad" wants="[ 🟦 🟦 🟦 ⬛ ]" reward="20" upgrade_type="expansion" />
   </card>
 
   <card id="quest_3_alexandrie_dreadnought" deck="quest" count="1">
     <name>Stavba Dreadnoughtu</name>
     <subtitle>Elitní zakázka</subtitle>
     <text>Loděnice kompletuje trup vlajkové lodi. Zástupci admirality štědře zaplatí za materiál.</text>
-    <quest era="3" city="Alexandrie" wants="[ 🟥 🟥 🟥 🟦 ]" reward="35" is_upgrade="false" />
+    <quest era="3" city="Alexandrie" wants="[ 🟥 🟥 🟥 🟦 ]" reward="30" />
   </card>
 
   <card id="quest_3_khartoba_pumps" deck="quest" count="1">
     <name>Zavlažovací systém</name>
     <subtitle>Infrastrukturní projekt</subtitle>
     <text>Přečerpávací stanice promění oázu v ráj. Toto město od nynějška produkuje dvojnásobek.</text>
-    <quest era="3" city="Khar-Toba" wants="[ 🟦 🟦 🟨 ⬛ ]" reward="28" is_upgrade="true" />
+    <quest era="3" city="Khar-Toba" wants="[ 🟦 🟦 🟨 ⬛ ]" reward="20" upgrade_type="expansion" />
   </card>
 
+  <card id="quest_3_londonium_metro" deck="quest" count="1">
+    <name>Parní podzemní dráha</name>
+    <subtitle>Elitní zakázka</subtitle>
+    <text>Metropole buduje ambiciózní síť podzemních tunelů. Je zapotřebí masivní pohonný systém a palivo.</text>
+    <quest era="3" city="Londonium" wants="[ 🟦 🟦 ⬛ ⬛ ]" reward="25" reward_modules="3" />
+  </card>
+
+  <card id="quest_3_nytov_foundry" deck="quest" count="1">
+    <name>Ocelová válcovna</name>
+    <subtitle>Infrastrukturní projekt</subtitle>
+    <text>Zprovozni plně automatizované válcovací stolice. Toto město od nynějška produkuje s maximální efektivitou.</text>
+    <quest era="3" city="Nýtov" wants="[ 🟥 🟥 🟦 🟦 ]" reward="20" upgrade_type="efficiency" />
+  </card>
+
+  <card id="quest_3_kesselgrad_dreadnought" deck="quest" count="1">
+    <name>Obrněná divize</name>
+    <subtitle>Elitní zakázka</subtitle>
+    <text>Vnitrozemská pevnost doplňuje stavy svých ocelových strážců. Generálové nešetří na rozpočtu.</text>
+    <quest era="3" city="Kesselgrad" wants="[ 🟥 🟥 ⬛ 🟦 ]" reward="35" />
+  </card>
+
+  <card id="quest_3_kiruna_cryo" deck="quest" count="1">
+    <name>Kryogenní sklady</name>
+    <subtitle>Elitní zakázka</subtitle>
+    <text>Arktické laboratoře potřebují izolovat nové tlakové nádrže na zkapalněný plyn.</text>
+    <quest era="3" city="Kiruna" wants="[ ⬛ ⬛ 🟦 🟦 ]" reward="25" reward_modules="3" />
+  </card>
+
+  <card id="quest_3_jarnborg_arsenal" deck="quest" count="1">
+    <name>Vojenský arzenál</name>
+    <subtitle>Elitní zakázka</subtitle>
+    <text>Loděnice v severním fjordu získala vládní kontrakt na těžké palubní zbraně.</text>
+    <quest era="3" city="Járnborg" wants="[ 🟥 🟥 🟥 ⬛ ]" reward="30" />
+  </card>
+
+  <card id="quest_3_thule_radio" deck="quest" count="1">
+    <name>Globální radiostanice</name>
+    <subtitle>Infrastrukturní projekt</subtitle>
+    <text>Vztyč obří vysílací věže na konci světa pro koordinaci flotil. Zvýší se efektivita celé oblasti.</text>
+    <quest era="3" city="Thule" wants="[ 🟦 🟦 🟦 🟦 ]" reward="20" upgrade_type="efficiency" />
+  </card>
+
+  <card id="quest_3_eisenklamm_viaduct" deck="quest" count="1">
+    <name>Monumentální viadukt</name>
+    <subtitle>Elitní zakázka</subtitle>
+    <text>Přemostění hlubokého horského kaňonu vyžaduje tisíce tun té nejkvalitnější konstrukční oceli.</text>
+    <quest era="3" city="Eisenklamm" wants="[ 🟥 🟥 ⬛ ⬛ ]" reward="30" />
+  </card>
+
+  <card id="quest_3_syracusae_expo" deck="quest" count="1">
+    <name>Světová výstava</name>
+    <subtitle>Elitní zakázka</subtitle>
+    <text>Jižní metropole hostí prestižní přehlídku technického pokroku. Je potřeba nakrmit davy a předvést prototypy.</text>
+    <quest era="3" city="Syracusae" wants="[ 🟦 🟦 🟨 🟨 ]" reward="28" reward_modules="3" />
+  </card>
+
+  <card id="quest_3_petra_mirrors" deck="quest" count="1">
+    <name>Solární zrcadla</name>
+    <subtitle>Infrastrukturní projekt</subtitle>
+    <text>Nainstaluj soustavu leštěných reflektorů na stěny kaňonu pro ohřev parních kolektorů města.</text>
+    <quest era="3" city="Petra" wants="[ 🟦 🟦 🟨 ⬛ ]" reward="20" upgrade_type="efficiency" />
+  </card>
 </cards>

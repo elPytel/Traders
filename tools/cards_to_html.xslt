@@ -20,6 +20,24 @@
     </xsl:if>
   </xsl:template>
 
+  <!-- Split a space-separated list of era ints and render one .module-icon per value -->
+  <xsl:template name="render-module-icons">
+    <xsl:param name="list"/>
+    <xsl:if test="string-length(normalize-space($list)) &gt; 0">
+      <xsl:choose>
+        <xsl:when test="contains($list, ' ')">
+          <xsl:variable name="first" select="substring-before($list, ' ')"/>
+          <xsl:variable name="rest" select="substring-after($list, ' ')"/>
+          <div class="module-icon"><xsl:value-of select="normalize-space($first)"/></div>
+          <xsl:call-template name="render-module-icons"><xsl:with-param name="list" select="$rest"/></xsl:call-template>
+        </xsl:when>
+        <xsl:otherwise>
+          <div class="module-icon"><xsl:value-of select="normalize-space($list)"/></div>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:if>
+  </xsl:template>
+
   <xsl:template match="/cards">
     <html>
       <head>
@@ -245,9 +263,10 @@
           /* Upgrade Badge */
           .upgrade-badge {
             position: absolute;
-            top: 2mm; right: 2mm;
+            top: 4mm; right: 2mm;
             background: #ffb300;
             color: #111;
+            display:flex; flex-direction:column; align-items:center; justify-content:center;
             font-weight: bold;
             font-size: 2.5mm;
             padding: 1mm 2mm;
@@ -256,19 +275,16 @@
             text-transform: uppercase;
           }
 
-          /* Reward module era badge placed on art, opposite upgrade badge */
-          .reward-module-badge {
-            position: absolute;
-            top: 2mm; left: 2mm;
-            background: rgba(47,55,64,0.9);
-            color: #f1f1f1;
-            font-weight: bold;
-            font-size: 4.5mm;
-            width: 10mm; height: 10mm;
-            display:flex; align-items:center; justify-content:center;
-            border-radius: 1mm;
+          .upgrade-badge .upgrade-label { font-size: 2.2mm; line-height:1; }
+          .upgrade-badge .upgrade-type { font-size: 2.2mm; line-height:1; font-weight:600; margin-top:0.5mm; }
+
+          /* Reward module era icons placed on art, opposite upgrade badge */
+          .reward-modules { position: absolute; top: 2mm; left: 2mm; display:flex; gap:1mm; align-items:center; z-index: 9; }
+          .module-icon {
+            width: 10mm; height: 10mm; box-sizing: border-box;
+            background: #2f3740; color: #fff; border-radius: 2mm;
+            display:flex; align-items:center; justify-content:center; font-weight:700; font-size:5mm;
             border: 0.4mm solid rgba(255,255,255,0.12);
-            z-index: 9;
           }
 
           /* Massive Reward badge */
@@ -283,7 +299,8 @@
             box-shadow: 0 0 2mm rgba(0,0,0,0.5);
           }
 
-          .reward-container { position: absolute; bottom: 2mm; right: 2mm; display:flex; gap:1mm; align-items:center; }
+          .reward-container { position: absolute; top: 2mm; right: 2mm; display:flex; gap:1mm; align-items:center; z-index: 12; transform: translateY(0); }
+
           .module-icon {
             width: 12mm; height: 12mm; box-sizing: border-box;
             background: #2f3740; color: #fff; border-radius: 2mm;
@@ -497,18 +514,36 @@
           </xsl:if>
         </div>
 
+        <!-- Reward badge moved above the top banner so it overlays the header -->
+        <xsl:if test="string-length(normalize-space($cardNode/quest/@reward)) &gt; 0">
+          <div class="reward-container"><div class="reward-badge"><xsl:value-of select="$cardNode/quest/@reward"/></div></div>
+        </xsl:if>
+
         <div class="card-art">
           <xsl:if test="string-length($bgImg) &gt; 0">
             <xsl:attribute name="style">background-image: url('<xsl:value-of select="$bgImg"/>');</xsl:attribute>
           </xsl:if>
 
-          <xsl:if test="$cardNode/quest/@is_upgrade = 'true'">
-            <div class="upgrade-badge">Upgrade</div>
+          <xsl:if test="string-length(normalize-space($cardNode/quest/@upgrade_type)) &gt; 0">
+            <div class="upgrade-badge">
+              <div class="upgrade-label">UPGRADE</div>
+              <div class="upgrade-type">
+                <xsl:choose>
+                  <xsl:when test="$cardNode/quest/@upgrade_type='efficiency'">Efektivita</xsl:when>
+                  <xsl:when test="$cardNode/quest/@upgrade_type='expansion'">Expanze</xsl:when>
+                  <xsl:otherwise><xsl:value-of select="$cardNode/quest/@upgrade_type"/></xsl:otherwise>
+                </xsl:choose>
+              </div>
+            </div>
           </xsl:if>
 
-          <!-- Show module-era icon for quest reward on the art, opposite upgrade badge -->
-          <xsl:if test="string-length(normalize-space($cardNode/quest/@reward_module_era)) &gt; 0">
-            <div class="reward-module-badge"><xsl:value-of select="$cardNode/quest/@reward_module_era"/></div>
+          <!-- Show module-era icons for quest reward on the art, opposite upgrade badge -->
+          <xsl:if test="string-length(normalize-space($cardNode/quest/@reward_modules)) &gt; 0">
+            <div class="reward-modules">
+              <xsl:call-template name="render-module-icons">
+                <xsl:with-param name="list" select="$cardNode/quest/@reward_modules"/>
+              </xsl:call-template>
+            </div>
           </xsl:if>
 
           <xsl:if test="$cardNode/module and number($cardNode/module/@capacity) &gt; 0">
@@ -575,9 +610,7 @@
                   <div>Místo: <strong><xsl:value-of select="$cardNode/quest/@city"/></strong></div>
                   <div class="quest-req"><xsl:value-of select="$cardNode/quest/@wants"/></div>
                 </div>
-                <div class="reward-container">
-                  <div class="reward-badge"><xsl:value-of select="$cardNode/quest/@reward"/></div>
-                </div>
+                <!-- reward moved to top-right on art -->
               </xsl:if>
             </xsl:otherwise>
           </xsl:choose>

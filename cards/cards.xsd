@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           elementFormDefault="qualified"
-           attributeFormDefault="unqualified">
+  elementFormDefault="qualified"
+  attributeFormDefault="unqualified">
 
   <!-- =====================
        Shared enums and types
@@ -52,6 +52,13 @@
     </xs:restriction>
   </xs:simpleType>
 
+  <xs:simpleType name="UpgradeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="efficiency" />
+      <xs:enumeration value="expansion" />
+    </xs:restriction>
+  </xs:simpleType>
+
   <!-- =====================
        Icons config
        ===================== -->
@@ -69,15 +76,19 @@
   <!-- =====================
        Variant blocks
        ===================== -->
-  
+
   <!-- Quest block handles standard tasks and infrastructure upgrades -->
   <xs:complexType name="QuestBlock">
     <xs:attribute name="era" type="EraInt" use="required" />
     <xs:attribute name="city" type="xs:string" use="required" />
     <xs:attribute name="wants" type="xs:string" use="required" />
-    <xs:attribute name="reward_module_era" type="EraInt" use="optional" />
+    <xs:attribute name="reward_modules" use="optional">
+      <xs:simpleType>
+        <xs:list itemType="EraInt" />
+      </xs:simpleType>
+    </xs:attribute>
     <xs:attribute name="reward" type="xs:integer" use="required" />
-    <xs:attribute name="is_upgrade" type="xs:boolean" default="false" />
+    <xs:attribute name="upgrade_type" type="UpgradeType" use="optional" />
     <xs:attribute name="image" type="xs:string" use="optional" />
   </xs:complexType>
 

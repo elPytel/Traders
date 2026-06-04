@@ -1,6 +1,8 @@
 # Nápady pro hru Traders
 
 - [Nápady pro hru Traders](#nápady-pro-hru-traders)
+- [Moduly](#moduly)
+  - [Cena modulů](#cena-modulů)
 - [Vizuální zpracování](#vizuální-zpracování)
 - [Stroje](#stroje)
   - [Návrh startovních podvozků (Epocha I)](#návrh-startovních-podvozků-epocha-i)
@@ -14,6 +16,12 @@
 - [Výměna mezi hráči](#výměna-mezi-hráči)
 
 Nejsou rozdělené balíčky vylepšení mezi jednotlivé stroje (lodě, vzducholodě, chodci), když si lížeš vylepšení, nikdy nevíš co dostaneš. Nuní hráče spolu obchodovat, nebo se naučit vyjít s tím co zrovna mají.
+
+# Moduly
+
+## Cena modulů
+Jaká je cena modulů?
+Jejich nákup by měl být dražší než prodej, ale mělo by být možné je prodávat za polovinu ceny, aby hráči mohli získat zpět část investice, pokud se rozhodnou změnit strategii.
 
 # Vizuální zpracování
 

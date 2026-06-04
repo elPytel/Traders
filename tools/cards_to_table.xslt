@@ -62,7 +62,7 @@
         <table class="filterable">
           <tr>
             <th>ID</th><th>Deck</th><th>Count</th><th>Name</th><th>Subtitle</th><th>Text</th>
-            <th>Era</th><th>City</th><th>Wants</th><th>Reward</th><th>Upgrade</th><th>Image</th>
+            <th>Era</th><th>City</th><th>Wants</th><th>Reward</th><th>Reward Modules</th><th>Upgrade</th><th>Image</th>
           </tr>
           <xsl:for-each select="card[quest]">
             <tr>
@@ -81,10 +81,20 @@
               <td class="col-city"><xsl:value-of select="quest/@city"/></td>
               <td><xsl:value-of select="quest/@wants"/></td>
               <td><xsl:value-of select="quest/@reward"/></td>
+              <td><xsl:value-of select="quest/@reward_modules"/></td>
               <td>
-                <xsl:if test="quest/@is_upgrade = 'true'">
-                  <span class="badge bg-true">UPGRADE</span>
-                </xsl:if>
+                <xsl:choose>
+                  <xsl:when test="string-length(normalize-space(quest/@upgrade_type)) &gt; 0">
+                    <span class="badge bg-true">
+                      <xsl:choose>
+                        <xsl:when test="quest/@upgrade_type='efficiency'">Efektivita</xsl:when>
+                        <xsl:when test="quest/@upgrade_type='expansion'">Expanze</xsl:when>
+                        <xsl:otherwise><xsl:value-of select="quest/@upgrade_type"/></xsl:otherwise>
+                      </xsl:choose>
+                    </span>
+                  </xsl:when>
+                  <xsl:otherwise/>
+                </xsl:choose>
               </td>
               <td>
                 <xsl:if test="string-length(quest/@image) &gt; 0">
