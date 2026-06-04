@@ -84,6 +84,41 @@
             background-color: #333;
           }
 
+          /* Module cards: place the art absolutely so it fills the whole card; header and overlay sit above it */
+          .card.module { overflow: hidden; }
+          .card.module .card-art {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-bottom: none;
+            z-index: 1;
+            background-size: cover;
+            background-position: center;
+          }
+          .card.module .card-header {
+            position: relative;
+            z-index: 6;
+            background: rgba(44,42,41,0.6);
+          }
+          .card.module .card-footer { display: none; }
+
+          /* Overlayed stats placed on the art for modules */
+          .stats-overlay {
+            position: absolute;
+            bottom: 0mm; /* start flush with card bottom */
+            left: 0;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 8;
+            display: flex;
+            justify-content: center;
+            pointer-events: none;
+            padding-bottom: 0.5mm;
+          }
+          .stats-overlay .stats-bar { pointer-events: auto; background: rgba(224,220,211,0.96); box-shadow: 0 -0.5mm 1mm rgba(0,0,0,0.45); }
+
           /* Era specific colors applied to titles */
           .era-1 .card-title { background: rgba(101, 67, 33, 0.85); }
           .era-2 .card-title { background: rgba(60, 64, 72, 0.85); }
@@ -157,21 +192,24 @@
           .stat.power { color: #2e7d32; }
           .stat.weight { color: #c62828; }
           .stat.capacity { color: #1565c0; }
+          .stat.armor { color: #37474f; }
+          .stat.damage { color: #b71c1c; }
           .stat span { font-size: 2.5mm; color: #111; font-weight: normal; }
 
           /* Cargo slots area for module capacity (physical resource cubes) */
           .cargo-area {
             position: absolute;
-            bottom: 2mm;
+            top: 50%;
             left: 0;
             width: 100%;
+            transform: translateY(-50%); /* vertically center on card */
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 2mm;
             padding: 0 2mm;
             box-sizing: border-box;
-            z-index: 5;
+            z-index: 7;
           }
 
           /* Exact physical dimension for one resource cube */
@@ -269,8 +307,8 @@
             transform: rotate(180deg);
           }
 
-          .banner-type { font-size: 14pt; }
-          .banner-era { font-size: 16pt; opacity: 0.8; }
+          .card-back .banner-type { font-size: 14pt; }
+          .card-back .banner-era { font-size: 16pt; opacity: 0.8; }
         </style>
       </head>
       <body>
@@ -423,7 +461,13 @@
     <xsl:variable name="bgImg" select="($cardNode/quest/@image | $cardNode/module/@image)[1]"/>
     <xsl:variable name="eraNum" select="($cardNode/quest/@era | $cardNode/module/@era)[1]"/>
 
-    <div class="card era-{$eraNum}">
+    <div>
+      <xsl:attribute name="class">
+        <xsl:choose>
+          <xsl:when test="$cardNode/module"> <xsl:text>card era-</xsl:text><xsl:value-of select="$eraNum"/><xsl:text> module</xsl:text> </xsl:when>
+          <xsl:otherwise> <xsl:text>card era-</xsl:text><xsl:value-of select="$eraNum"/> </xsl:otherwise>
+        </xsl:choose>
+      </xsl:attribute>
         <div class="card-header">
           <div class="title-main"><xsl:value-of select="$cardNode/name"/></div>
           <xsl:if test="$cardNode/subtitle">
@@ -447,43 +491,67 @@
               </xsl:call-template>
             </div>
           </xsl:if>
+
+          <!-- For module cards we overlay the stats on the art so the image spans the card -->
+          <xsl:if test="$cardNode/module">
+            <div class="stats-overlay">
+              <div class="stats-bar">
+                <xsl:if test="$cardNode/module/@power &gt; 0">
+                  <div class="stat power">
+                    <xsl:value-of select="$cardNode/module/@power"/>
+                    <span>Výkon</span>
+                  </div>
+                </xsl:if>
+                <xsl:if test="$cardNode/module/@weight &gt; 0">
+                  <div class="stat weight">
+                    <xsl:value-of select="$cardNode/module/@weight"/>
+                    <span>Zátěž</span>
+                  </div>
+                </xsl:if>
+                <xsl:if test="$cardNode/module/@capacity &gt; 0">
+                  <div class="stat capacity">
+                    <xsl:value-of select="$cardNode/module/@capacity"/>
+                    <span>Sklad</span>
+                  </div>
+                </xsl:if>
+                <xsl:if test="$cardNode/module/@armor &gt; 0">
+                  <div class="stat armor">
+                    <xsl:value-of select="$cardNode/module/@armor"/>
+                    <span>Zbroj</span>
+                  </div>
+                </xsl:if>
+                <xsl:if test="$cardNode/module/@damage &gt; 0">
+                  <div class="stat damage">
+                    <xsl:value-of select="$cardNode/module/@damage"/>
+                    <span>Útok</span>
+                  </div>
+                </xsl:if>
+              </div>
+            </div>
+          </xsl:if>
         </div>
 
         <div class="card-footer">
-          <div class="card-desc">
-            <xsl:value-of select="$cardNode/text"/>
-          </div>
+          <xsl:choose>
+            <!-- Module cards: footer intentionally left empty; stats rendered as overlay -->
+            <xsl:when test="$cardNode/module">
+              <div style="flex-grow:1"></div>
+            </xsl:when>
+            <!-- Quest cards: keep full footer (description, quest details, reward) -->
+            <xsl:otherwise>
+              <div class="card-desc">
+                <xsl:value-of select="$cardNode/text"/>
+              </div>
 
-          <xsl:if test="$cardNode/quest">
-            <div class="quest-details">
-              <div>Místo: <strong><xsl:value-of select="$cardNode/quest/@city"/></strong></div>
-              <div class="quest-req"><xsl:value-of select="$cardNode/quest/@wants"/></div>
-            </div>
-            <div class="reward-badge"><xsl:value-of select="$cardNode/quest/@reward"/></div>
-          </xsl:if>
-      
-          <xsl:if test="$cardNode/module">
-            <div class="stats-bar">
-              <xsl:if test="$cardNode/module/@power &gt; 0">
-                <div class="stat power">
-                  <xsl:value-of select="$cardNode/module/@power"/>
-                  <span>Výkon</span>
+              <xsl:if test="$cardNode/quest">
+                <div class="quest-details">
+                  <div>Místo: <strong><xsl:value-of select="$cardNode/quest/@city"/></strong></div>
+                  <div class="quest-req"><xsl:value-of select="$cardNode/quest/@wants"/></div>
                 </div>
+                <div class="reward-badge"><xsl:value-of select="$cardNode/quest/@reward"/></div>
               </xsl:if>
-              <xsl:if test="$cardNode/module/@weight &gt; 0">
-                <div class="stat weight">
-                  <xsl:value-of select="$cardNode/module/@weight"/>
-                  <span>Zátěž</span>
-                </div>
-              </xsl:if>
-              <xsl:if test="$cardNode/module/@capacity &gt; 0">
-                <div class="stat capacity">
-                  <xsl:value-of select="$cardNode/module/@capacity"/>
-                  <span>Sklad</span>
-                </div>
-              </xsl:if>
-            </div>
-          </xsl:if>
+            </xsl:otherwise>
+          </xsl:choose>
         </div>
 
     </div>
